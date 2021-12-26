@@ -99,3 +99,9 @@
                 border-color 0.3s ease-in;
   }
 }
+
+video {
+  /* override other styles to make responsive */
+  width: 100%    !important;
+  height: auto   !important;
+}
