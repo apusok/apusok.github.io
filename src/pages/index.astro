@@ -1,0 +1,79 @@
+---
+import { Container, TextCardSection, FeatureCard } from '@components/odyssey-theme';
+
+import Layout from '../layouts/Page.astro';
+import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
+import settings from '../config/settings.js';
+import {ThemeSwitcher} from '../components/theme-switcher/theme-switcher';
+---
+<link rel="stylesheet" href="/particles/style-particles.css"></link>
+
+<Layout>
+	<div id="particles-js">
+		
+	<script type="text/javascript" src="/particles/particles.js"></script>
+	<script type="text/javascript" src="/particles/app.js"> </script>
+
+	<HomeHeroSection />
+	<Container>
+		<section class="feature-card__section">
+			<h3>Projects</h3>
+			<div class="feature-card__grid">
+				<FeatureCard href="/apusok/research" title="Research" imgSrc="/assets/screenshots/research">
+				</FeatureCard>
+				<FeatureCard href="/apusok/software" title="Software" imgSrc="/assets/screenshots/software">
+				</FeatureCard>
+			</div>
+		</section>
+
+		<h3>
+			News - Bluesky feed
+		</h3>
+		
+		<!-- <TextCardSection narrow style="z-index: 999; max-width:50%"> -->
+			
+		<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
+		<bsky-embed
+    username="apusok.bsky.social"
+    mode=""
+    limit="3"
+    link-target="_blank"
+    link-image="true"
+    load-more="true"
+    disable-styles="false"
+    custom-styles=".border-slate-300 { border-color: #112138; background: #eeeeee; z-index: 999; position:relative}"
+    date-format='{"type":"absolute","options":{"year":"numeric","month":"numeric","day":"numeric"}}'
+  >
+  </bsky-embed>
+
+<!-- </TextCardSection> -->
+
+<!-- 	<h3>
+		Website Themes
+	</h3>
+	{settings.enableThemeSwitcher && <ThemeSwitcher client:only/>} -->
+	</Container>
+
+</div>
+
+</Layout>
+
+<style>
+	.feature-card__section {
+		margin: var(--section-margin) auto;
+	}
+	.feature-card__grid {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		gap: var(--theme-grid-gap);
+		font-family: 'Roboto Serif';
+	}
+	@media (max-width: 768px) {
+		.feature-card__grid {
+			grid-template-columns: 1fr;
+		}
+	}
+	.bsky_position {
+		z-index: 999;
+	}
+</style>

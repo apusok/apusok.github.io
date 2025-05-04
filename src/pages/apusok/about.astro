@@ -1,0 +1,129 @@
+---
+import { Container,Button,TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+import HeroSection from '../../components/sections/heros/HeroSection.astro';
+import settings from '../../config/settings.js';
+import {ThemeSwitcher} from '../../components/theme-switcher/theme-switcher';
+
+import { Icon } from 'astro-icon/components';
+
+const seo = {
+	title: 'About | A Pusok',
+	description: 'About Page',
+};
+
+const { footerSocials, footerLists, background, color, showPlug: showPlug = true } =
+  Astro.props;
+---
+
+<Layout {seo}>
+	<HeroSection>
+		<div slot="text-container">
+			<h1>About me</h1>
+			<p>
+				I like to build models of the Earth on the computer.
+      </p>
+      <p>
+        If interested working with me as a PhD student or postdoctoral researcher, please get in touch to discuss projects that are broadly related to my expertise.
+      </p>
+      <h4>
+        Email: <a class="a_theme" href="mailto:adina.pusok@earth.ox.ac.uk" rel="nofollow">adina.pusok@earth.ox.ac.uk</a>
+			</h4>
+
+      
+		</div>
+    <picture slot="image-container" style="width: 40%;">
+      <img src="/assets/img/profile2025.png" alt="logo">
+    </picture>
+	</HeroSection>
+
+  <TextSection narrow>
+      
+<h3>Work Experience</h3>
+<table cellspacing = "20" style = "border-collapse: collapse;">
+    <tr><td style = "border-bottom: 0px solid black;">01/2024 - present</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Department of Earth Sciences, University of Oxford, UK <br /> <i>Royal Society University Research Fellow (OceanMelt project)</i></td></tr>
+    <tr><td style = "border-bottom: 0px solid black;">11/2021 - 06/2022</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Exeter College, Oxford, UK <br /> <em>Stipendiary Lecturer in Geophysics</em></td></tr>
+    <tr><td style = "border-bottom: 0px solid black;">06/2019 - 12/2023</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Department of Earth Sciences, University of Oxford, UK <br /> <em>Postdoctoral Research Associate (RIFT-O-MAT project)</em></td></tr>
+    <tr><td style = "border-bottom: 0px solid black;">10/2016 - 04/2019</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Scripps Institution of Oceanography, UC San Diego, USA <br /> <em>John W. Miles Postdoctoral Fellow at IGPP</em></td></tr>
+</table>
+
+<ul></ul>
+
+<h3>Education</h3>
+<table cellspacing = "20" style = "border-collapse: collapse;">
+    <tr><td style = "border-bottom: 0px solid black;">01/2021 - 10/2021</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Advance HE and CTL, University of Oxford, Oxford, United Kingdom <br /> <em>Associate Fellowship, Descriptor 1 UK Professional Standards Framework (UKPSF)</em></td></tr>
+    <tr><td style = "border-bottom: 0px solid black;">07/2012 - 06/2016</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">Johannes Gutenberg University, Mainz, Germany <br /> <em>DPhil. in Natural Sciences - Geophysics</em></td></tr>
+    <tr><td style = "border-bottom: 0px solid black;">10/2008 - 06/2012</td><td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td><td style = "border-bottom: 0px solid black;">University of Oxford, Oxford, United Kingdom <br /> <em>MEarthSci. Earth Sciences</em></td></tr>
+</table>
+
+<ul></ul>
+
+<h3>Funding and Awards</h3>
+<ul>
+    <li>2024 and 2025 University Researcher Representative Fellowship, U. Oxford.</li>
+    <li>2023 Royal Society University Research Fellowship (8 years funding, ~£1.5M). <a class="a_theme" target="_blank" href="https://royalsociety.org/news/2023/10/early-career-researchers-funding-2023/">[Press release]</a></li>
+    <li>2019 Editors' Citation for Excellence in Refereeing for Geochem., Geophys., Geosyst. <a class="a_theme" target="_blank" href="https://eos.org/agu-news/in-appreciation-of-agus-outstanding-reviewers-of-2019">[Press release]</a></li>
+    <li>CIG Travel award to attend the international Geodynamics workshops: 2019 Ada Lovelace (Siena, Italy), 2017 NetherMod (Putten, the Netherlands).</li>
+    <li>John W. Miles Postdoctoral Fellowship, Cecil H. and Ida M. Green Foundation, Scripps Institution of Oceanography, UCSD, 2016 - 2018.</li>
+    <li>Outstanding Student Poster Award (OSPA) at the EGU Annual Meeting 2014, Vienna, Austria.</li>
+    <li>Academic Exhibition Prize in 2009, 2010, 2011, St. Anne's College, University of Oxford, UK.</li>
+</ul>
+
+<h3>Community work</h3>
+
+<p>
+Since 2020, I have focused on the <a class="a_theme" target="_blank" href="https://www.mpls.ox.ac.uk/training/mpls-research-staff-forum">representation of postdocs</a> at U. Oxford, a need exacerbated 
+by the COVID-19 pandemic to improve the postdoc experience regarding the leave management system, 
+teaching pay, representation, resource allocation, training and support for fellowship and funding 
+applications, and career progression. My roles include: 
+<ul>
+  <li>Research staff representative: co-chair within MPLS division, member of Research Staff Consultation Group, member of the Research&Innovation Committee, U. Oxford (2024-present) </li>
+  <li>Postdoc representative in Department of Earth Sciences, Oxford (2021-2023) </li>
+</ul>
+</p>
+
+<p>
+As the early career scientist (ECS) representative for the Geodynamics division at the European 
+Geosciences Union (2016-2019), I set up the calendar of ECS activities including the Geodynamics 101 short course (that resulted in the <a class="a_theme" target="_blank" href="https://se.copernicus.org/articles/13/583/2022/se-13-583-2022-discussion.html">GD101 paper</a>), 
+<a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/">the division blog</a>, 
+and the division social media. Occasionally, I also write for the EGU Geodynamics division Blog.
+</p>
+
+<p>
+  When I have some spare time, I like to join high-school classrooms online in Romania (through Romanian Science Festival or other NGOs) or do local outreach for girls in STEM.
+</p>
+
+<p>
+Last but not least, I enjoy being active in the academic life surrounding my work:
+<ul>
+  <li>Session convener at EGU and AGU meetings</li>
+  <li>Organizer of the Oxford Fluids Network and Oxford Exoplanets Network annual workshops (2019)</li>
+  <li>Organizer of Geophysics (GP) seminars, IGPP/SIO (2016-2018)</li>
+  <li>Member of the Organizing Committee for the 'Plate Tectonics Symposium at SIO' - May 9-10, 2018</li>
+  <li>Reviewer for Funding Agencies: NSF (USA), ANR (France), Alexander von Humboldt Foundation (DE).</li>
+  <li>Reviewer: G-cubed, JGR - Solid Earth, Solid Earth, Tectonics, GSA Bulletin, Geology, Geophys. J. Int., Nature Rev. Earth Env.</li>
+  <li>OSPA Judge at the AGU Fall Meetings, EGU General Assemblies</li>
+</ul>
+It takes a village to create a vibrant scientific community. 
+</p>
+
+<ul></ul>
+<h3>Teaching</h3>
+<p>
+  I teach undergraduate/graduate courses in Mathematics, Geophysics and Geodynamics in a variety of 
+  formats - lectures, practicals, tutorials.
+</p>
+
+<p>
+  While working from home and faced with online teaching in 2021, I decided to do a training course: 
+  the Advanced Teaching and Learning course, <a class="a_theme" target="_blank" href="https://www.ctl.ox.ac.uk">Centre for Teaching and Learning</a>, Oxford, 2021. As a result, I completed the
+  certification for <a class="a_theme" target="_blank" href="https://www.advance-he.ac.uk/fellowship/associate-fellowship">Associate Fellowship by Advance HE</a> with the portfolio 
+      <i>Remote teaching an undergraduate computational course in Earth Sciences</i>
+  </p>
+
+  <div class="cta-buttons__container">
+    <Button href="/">Return Home</Button>
+  </div>
+
+  </TextSection>
+</Layout>

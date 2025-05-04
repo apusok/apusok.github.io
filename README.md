@@ -1,78 +1,71 @@
-# apusok.github.io
-Personal website based on:
+<p align="center">
+  <img src="assets/gh-banner.png" alt="Odyssey Theme Banner">
+</p>
 
-# Particle Jekyll Theme
+<br/>
+<div align="center">
+  <a href="https://twitter.com/jaydanurwin">
+  <img src="assets/twitter-badge.svg" alt="Follow Jaydan Urwin on Twitter"/>
+</a>
+  <a href="https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0">
+    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
+  </a>
+</div>
+<br/>
 
-![](./particle.jpg)
+# Odyssey Theme
 
-This is a simple and minimalist template for Jekyll designed for developers that want to show of their portfolio.
+Odyssey Theme is a modern theme/starter for a business or startup's marketing website. It provides landing page examples, a full-featured blog, contact forms, and more. It is fully themeable to match your business' branding and style. It even includes a theme switcher component to show how easily the entire style of the site can be changed with only a few lines of CSS.
 
-The Theme features:
+## Features
 
-- Gulp
-- SASS
-- Sweet Scroll
-- Particle.js
-- BrowserSync
-- Font Awesome and Devicon icons
-- Google Analytics
-- Info Customization
+<p align="center">
+  <img src="assets/lh-screenshot.png" alt="Screenshot of perfect score in Lighthouse benchmark">
+</p>
 
-## Basic Setup
 
-1. [Install Jekyll](http://jekyllrb.com)
-2. Clone the particle theme: `git clone https://github.com/nrandecker/particle.git`
-3. Edit `_config.yml` to personalize your site.
+- ✅ **A perfect score in Lighthouse**
+- ✅ **Blazing fast performance thanks to Astro 🚀**
+- ✅ **A Full Featured Blog with Tagging**
+- ✅ **Fully theme-able styles with for buttons, shapes, backgrounds, surfaces, etc.**
+- ✅ **Responsive, mobile-friendly landing pages**
+- ✅ **SEO Best Practices (Open Graph, Canonical URLs, sitemap)**
+- ✅ **Performant Local Fonts Setup**
+- ✅ **Contact Forms Setup for Netlify, Formspree, Formspark, etc.**
+- ✅ **A package of ready-to-use UI components**
 
-## Site and User Settings
 
-You have to fill some informations on `_config.yml` to customize your site.
+## Demo
 
+View a [live demo](https://odyssey-theme.sapling.supply/) of the Odyssey Theme.
+
+## Documentation
+
+1. View the [Theme Setup Guide](https://odyssey-theme.sapling.supply/theme/theme-setup)
+2. View the [Customizing the Theme Guide](https://odyssey-theme.sapling.supply/theme/customizing-odyssey)
+
+## Usage
+
+```bash
+cd theme
+
+npm install
+
+npm start
 ```
-# Site settings
-description: A blog about lorem ipsum dolor sit amet
-baseurl: "" # the subpath of your site, e.g. /blog/
-url: "http://localhost:3000" # the base hostname & protocol for your site
 
-# User settings
-username: Lorem Ipsum
-user_description: Anon Developer at Lorem Ipsum Dolor
-user_title: Anon Developer
-email: anon@anon.com
-twitter_username: lorem_ipsum
-github_username:  lorem_ipsum
-gplus_username:  lorem_ipsum
-```
+## Deploy
 
-**Don't forget to change your url before you deploy your site!**
+Feel free to deploy and host your site on your favorite static hosting service such as Netlify, Firebase Hosting, Vercel, GitHub Pages, etc.
 
-## Color and Particle Customization
-- Color Customization
-  - Edit the sass variables
-- Particle Customization
-  - Edit the json data in particle function in app.js
-  - Refer to [Particle.js](https://github.com/VincentGarreau/particles.js/) for help
+Astro has [an in-depth guide](https://docs.astro.build/en/guides/deploy/) on how to deploy an Astro project to each service.
 
-## Running the blog in local
+## Sponsor
 
-In order to compile the assets and run Jekyll on local you need to follow those steps:
+If you find this theme useful, please consider donating to support the continued development of it with the link below
 
-- Install [NodeJS](https://nodejs.org/)
-- Install [Jekyll](https://jekyllrb.com): `sudo gem install bundler jekyll`
-- Install [Yarn](https://yarnpkg.com/): `npm install -g yarn`
-- Install dependencies: `yarn`
-- Run: `gulp`
+[Donate to Odyssey Theme](https://sapling.lemonsqueezy.com/checkout/buy/9b78751f-6382-442d-ac99-32c2318b70a0)
 
-## Questions
+## Support
 
-Having any issues file a [GitHub Issue](https://github.com/nrandecker/particle/issues/new).
-
-## License
-
-This theme is free and open source software, distributed under the The MIT License. So feel free to use this Jekyll theme anyway you want.
-
-## Credits
-
-This theme was partially designed with the inspiration from these fine folks
-- [Willian Justen](https://github.com/willianjusten/will-jekyll-template)
-- [Vincent Garreau](https://github.com/VincentGarreau/particles.js/)
+Please feel free to post issues or submit PRs to this repo and we will do our best to respond in a timely manner, keeping in mind this template is offered for free as is on GitHub.
