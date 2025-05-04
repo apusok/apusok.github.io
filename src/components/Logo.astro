@@ -1,8 +1,10 @@
 ---
+import { Image } from 'astro:assets';
+import logoimg from '../../assets/img/logo_transparent_small.png';
 ---
 
 <div class="odyssey-logo"> 
-	<img src="{{ "/assets/img/logo_transparent_small.png" | prepend: site.baseurl }}" alt="logo" width=10%> &nbsp; Adina E. Pusok
+	<img src={logoimg} alt="logo" width=10%> &nbsp; Adina E. Pusok
 </div>
 
 <style>
