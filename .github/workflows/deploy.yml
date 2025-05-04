@@ -14,9 +14,6 @@ permissions:
   pages: write
   id-token: write
 
-install:
-- npm ci
-
 jobs:
   build:
     runs-on: ubuntu-latest
