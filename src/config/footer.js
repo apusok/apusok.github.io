@@ -1,80 +1,121 @@
 export const footerSocials = [
-  {
-    name: 'Twitter',
-    url: 'https://twitter.com/jaydanurwin',
-    icon: "mdi:twitter",
+	{
+    name: 'Email',
+    url: 'mailto:adina.pusok@earth.ox.ac.uk',
+    icon: "ic:mail-outline",
   },
-  {
-    name: 'Youtube',
-    url: 'https://youtube.com/@jaydanurwin',
-    icon: "mdi:youtube",
+	{
+    name: 'Google Scholar',
+    url: 'https://scholar.google.com/citations?user=AojkhEwAAAAJ&hl=en',
+    icon: "google-scholar",
   },
+	{
+    name: 'Orcid',
+    url: 'https://orcid.org/0000-0002-4439-8124',
+    icon: "orcid",
+  },
+  // {
+  //   name: 'Twitter',
+  //   url: 'https://twitter.com/AdinaPusok',
+  //   icon: "mdi:twitter",
+  // },
+  // {
+  //   name: 'Youtube',
+  //   url: 'https://www.youtube.com/channel/UCOBlIEX2TMrTX1meSHNtr8Q',
+  //   icon: "mdi:youtube",
+  // },
   {
     name: 'Github',
-    url: 'https://github.com/jaydanurwin',
+    url: 'https://github.com/apusok',
     icon: "mdi:github",
   },
   {
-    name: 'Discord',
-    url: 'https://astro.build/chat',
-    icon: "ic:baseline-discord",
+    name: 'Bitbucket',
+    url: 'https://bitbucket.org/adina',
+    icon: "bitbucket-logo-svgrepo-com",
   },
+	{
+    name: 'Bluesky',
+    url: 'https://bsky.app/profile/apusok.bsky.social',
+    icon: "Bluesky_logo",
+  },
+
 ]
 
 export const footerLists = [
+	// {
+	// 	title: 'Landing Pages',
+	// 	items: [
+	// 		{
+	// 			title: 'Landing Page 1',
+	// 			slug: '/landing-pages/landing-1',
+	// 		},
+	// 		{
+	// 			title: 'Landing Page 2',
+	// 			slug: '/landing-pages/landing-2',
+	// 		},
+  //     // {
+	// 		// 	title: 'Landing Page 3',
+	// 		// 	slug: '/landing-pages/landing-3',
+	// 		// },
+	// 	],
+	// },
+	// {
+	// 	title: 'Menu',
+	// 	items: [
+	// 		{
+	// 			title: 'Home',
+	// 			slug: '/company/home',
+	// 		},
+	// 		{
+	// 			title: 'Team',
+	// 			slug: '/company/team',
+	// 		},
+	// 		{
+	// 			title: 'Research',
+	// 			slug: '/company/research',
+	// 		},
+	// 		{
+	// 			title: 'Publications',
+	// 			slug: '/company/publications',
+	// 		},
+	// 		// {
+	// 		// 	title: 'Blog',
+	// 		// 	slug: '/blog',
+	// 		// },
+	// 		// {
+	// 		// 	title: 'Contact',
+	// 		// 	slug: '/company/contact',
+	// 		// },
+	// 	],
+	// },
 	{
-		title: 'Landing Pages',
+		title: 'Other links',
 		items: [
 			{
-				title: 'Landing Page 1',
-				slug: '/landing-pages/landing-1',
+				title: 'Oxford Earth Sciences',
+				slug: 'https://www.earth.ox.ac.uk',
 			},
 			{
-				title: 'Landing Page 2',
-				slug: '/landing-pages/landing-2',
+				title: 'Seafloor Explorer Seminars',
+				slug: '/apusok/seafloorseminar',
 			},
-      // {
-			// 	title: 'Landing Page 3',
-			// 	slug: '/landing-pages/landing-3',
+			{
+				title: 'The Royal Society',
+				slug: 'https://royalsociety.org',
+			},
+			// {
+			// 	title: 'Style Guide',
+			// 	slug: '/theme/style-guide',
 			// },
-		],
-	},
-	{
-		title: 'Company',
-		items: [
-			{
-				title: 'About',
-				slug: '/company/about',
-			},
-			{
-				title: 'Blog',
-				slug: '/blog',
-			},
-			{
-				title: 'Contact',
-				slug: '/company/contact',
-			},
-		],
-	},
-	{
-		title: 'Theme',
-		items: [
-			{
-				title: 'Get Started',
-				slug: '/theme/get-started',
-			},
-			{
-				title: 'Style Guide',
-				slug: '/theme/style-guide',
-			},
-      {
-        title: 'Theme Setup',
-        slug: '/theme/theme-setup',
-      },
-      {
-        title: 'Customizing Odyssey',
-        slug: '/theme/customizing-odyssey',
-      }
+      // {
+      //   title: 'Theme Setup',
+      //   slug: '/theme/theme-setup',
+      // },
+      // {
+      //   title: 'Customizing Odyssey',
+      //   slug: '/theme/customizing-odyssey',
+      // }
 		],
 	},
 ];

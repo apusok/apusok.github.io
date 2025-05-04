@@ -33,6 +33,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
             ))
           }
         </ul>
+        {showPlug && <Plug/>}
       </div>
       {
         footerLists.map((list) => (
@@ -41,7 +42,7 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
             <ul class="footer-link__list">
               {list.items.map((item) => (
                 <li>
-                  <a href={item.slug}>{item.title}</a>
+                  <a target="_blank" href={item.slug}>{item.title}</a>
                 </li>
               ))}
             </ul>
@@ -50,8 +51,10 @@ const { footerSocials, footerLists, copyrightName, background, color, showPlug: 
       }
     </div>
     <div class="footer-copyright__container">
-      {showPlug && <Plug/>}
-      <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}</p>
+      <p>Copyright &copy; {new Date().getFullYear()} {copyrightName}, 
+        build with <a target="_blank" href="https://github.com/treefarmstudio/odyssey-theme/">Odyssey Theme</a> 
+        and hosted on <a target="_blank" href="https://github.com" rel="nofollow">Github</a>. Other thanks to <a target="_blank" href="https://github.com/Vincenius/bsky-embed" rel="nofollow">Bluesky feed</a>. 
+      </p>
     </div>
 
   </Container>

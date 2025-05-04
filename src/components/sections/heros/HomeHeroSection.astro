@@ -1,43 +1,45 @@
 ---
 import { Icon } from 'astro-icon/components';
-import { Container, Button } from '@components/odyssey-theme';
+import { 
+	Container, 
+	Button,
+	YouTubeEmbedSection, } from '@components/odyssey-theme';
 import settings from '../../../config/settings.js';
 import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
+
 ---
+<link rel="stylesheet" href="/particles/style-particles.css"></link>
 
 <Container>
+	<!-- <div id="particles-js">
+		
+	<script type="text/javascript" src="/particles/particles.js"></script>
+	<script type="text/javascript" src="/particles/app.js"> </script> -->
 	<section class="hero-section__section">
 		<div class="hero-section__text">
-				<h1>Welcome to Odyssey</h1>
-				<p>
-					A marketing website theme built with <a
-						href="https://astro.build"
-						target="_blank"
-						rel="noreferrer">Astro</a
-					> and carefully crafted for startups and businesses.
-				</p>
-				<div class="hero-btns__container">
-					<Button href="/theme/get-started" customIcon
-						>Get Started
-            <Fragment slot="icon">
-              <Icon name="ic:baseline-chevron-right"/>
-            </Fragment>
-            </Button
-					>
-					<Button href="/theme/style-guide" unelevated>Style Guide</Button>
-				</div>
-        {settings.enableThemeSwitcher && <ThemeSwitcher client:only/>}
+			<center>
+			<h3>Computational Fluid Dynamics for Solid Earth</h3>
+			
+			<img style="width: 30%; z-index: 999;" src="/assets/img/profile2020.jpg" alt="logo">
+			<p>
+			I am a Royal Society University Research Fellow at the <a class="a_theme" target="_blank" href="https://www.earth.ox.ac.uk">Department of Earth Sciences</a>, 
+			University of Oxford. My research focuses on understanding the interior dynamics of the Earth. 
+			In particular, I build models of magma generation and transport from a partially-molten mantle 
+			all the way to the surface coupled with tectonic deformation.
+			</p>
+		</center>
 		</div>
-		<div class="hero-section__image">
-				<picture>
-					<img
-						src="/assets/images/home/classic-hero.jpg"
-						alt="Astro Odyssey"
-						id="home-hero-image"
-					/>
-				</picture>
-		</div>
+
+		<picture slot="image-container">
+			<center>
+				<p style="color: #fff;">Convective flow beneath mid-ocean ridges</p>
+				<video width=90% controls>
+				<source src="/assets/videos/FR1_dTdx005_beta2_4-15myr.mp4" type="video/mp4">
+			</video>
+			</center>
+		</picture>
 	</section>
+	<!-- </div> -->
 </Container>
 
 <style>
@@ -48,10 +50,16 @@ import {ThemeSwitcher} from '../../theme-switcher/theme-switcher';
 		grid-template-columns: 1fr 1fr;
 		align-items: center;
 		gap: 1rem;
+		margin-top: -1950px;
+		background: var(--theme-surface-1);
+		border-radius: var(--theme-shape-radius);
+		/* margin-bottom: 340px; */
 	}
 	.hero-section__text {
 		justify-self: center;
 		max-width: 25rem;
+		color: var(--theme-on-surface-1);
+		z-index: 999;
 	}
 	.hero-btns__container {
 		display: flex;

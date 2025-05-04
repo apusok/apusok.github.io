@@ -1,0 +1,137 @@
+---
+import { 
+	Container, 
+	Button,
+  TextCardSection,
+	YouTubeEmbedSection, 
+  TextSection } from '@components/odyssey-theme';
+import Layout from '../../layouts/Page.astro';
+
+const seo = {
+  title: `Publications | A Pusok`,
+  description: `Publication list`,
+};
+---
+
+<Layout seo={seo}>
+	<TextSection narrow>
+			<h2>Publications</h2>
+			A complete list of publications can be found in <a class="a_theme" target="_blank" 
+			href="https://scholar.google.com/citations?user=AojkhEwAAAAJ&hl=en">Google Scholar</a>.
+			<br></br>
+			<h3> In review/Submitted </h3>
+<ul>
+	<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Li. Y., Davis, T., May, D.A., Katz, R.F., 
+		<em>GRL</em>, Inefficient melt transport across a weakened lithosphere led to anomalous rift architecture in 
+		the Turkana Depression.</li>
+	<li style="margin-bottom: 10px;">Li. Y., Davis, T., <strong>Pusok, A.E.</strong>, Katz, R.F., <em>GMD</em>, 
+		Models of buoyancy-driven dykes using continuum plasticity and fracture mechanics: a comparison.</li>
+</ul>
+
+			<h3> Peer-reviewed </h3>
+<ol reversed>
+    <li style="margin-bottom: 10px;">Li, Y., <strong>Pusok, A.E.</strong>, Davis, T., May, D., and Katz, R. (2023), 
+			Continuum approximation of dyking with a theory for poro-viscoelastic–viscoplastic deformation, <em>GJI</em>,
+			doi:10.1093/gji/ggad173. 
+			<a class="a_theme" target="_blank" href="https://doi.org/10.1093/gji/ggad173">[link]</a> 
+			<a class="a_theme" target="_blank" href="https://github.com/YuanLiAC/poroVEVP">[code repository]</a></li></li>
+
+    <li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Katz, R.F., May, D.A., Li, Y. (2022), Chemical heterogeneity, 
+			convection and asymmetry beneath mid-ocean ridges, <em>GJI</em>, doi:10.1093/gji/ggac309. 
+			<a class="a_theme" target="_blank" href="https://doi.org/10.1093/gji/ggac309">[link]</a> 
+			<a class="a_theme" target="_blank" href="https://github.com/apusok/FD-PDE/tree/main/models/mbuoy3">[code repository]</a></li>
+
+    <li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Stegman, D.R., Kerr, M. (2022), The effect 
+			of sediments on the dynamics and accretionary style of subduction margins, <em>Solid Earth</em>,
+			doi:10.5194/se-2021-137. 
+			<a class="a_theme" target="_blank" href="https://se.copernicus.org/preprints/se-2021-137/">[link]</a> 
+			<a class="a_theme" target="_blank" href="https://bitbucket.org/adina/rep-msubdsed/src/master/">[data repository]</a></li>
+
+    <li style="margin-bottom: 10px;">van Zelst, I., Crameri, F., <strong>Pusok, A.E.</strong>, Glerum, A., Dannberg, J., 
+			Thieulot, C. (2022),  101 geodynamic modelling: how to design, interpret, and communicate numerical studies of the 
+			solid Earth, <em>Solid Earth</em>, 13, 583-637, doi:10.5194/se-13-583-2022. 
+			<a class="a_theme" target="_blank" href="https://se.copernicus.org/preprints/se-2021-14/">[link]</a></li>
+    
+		<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Stegman, D.R. (2020), The convergence history of 
+			India-Eurasia records multiple subduction dynamics processes, <em>Science Advances</em>, 6(19), eaaz8681, 
+			doi:10.1126/sciadv.aaz8681. 
+      <a class="a_theme" target="_blank" href="https://advances.sciencemag.org/content/6/19/eaaz8681">[link]</a>
+      <a class="a_theme" target="_blank" href="https://bitbucket.org/adina/rep-mconvindia/src/master/">[data repository]</a></li>
+    
+			<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Stegman, D.R. (2019), Formation and stability of same‐dip 
+				double subduction systems, <em>JGR: Solid Earth</em>, 124, 7387-7412, doi: 10.1029/2018JB017027. 
+      <a class="a_theme" target="_blank" href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JB017027">[link]</a>
+      <a class="a_theme" target="_blank" href="https://bitbucket.org/adina/rep-mdoublesubd/src/master/">[data repository]</a></li>
+    
+			<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Kaus, B., Popov, A. (2018), The effect of rheological 
+				approximations in 3-D numerical simulations of subduction and collision, <em>Tectonophys.</em>, 746, 296-311, 
+				doi:10.1016/j.tecto.2018.04.017. 
+      <a class="a_theme" target="_blank" href="https://www.sciencedirect.com/science/article/pii/S0040195118301604">[link]</a>
+      <a class="a_theme" target="_blank" href="https://bitbucket.org/adina/rep-mnvep/src/master/">[data repository]</a></li>
+    
+			<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Kaus, B.J.P., Popov, A.A. (2017), On the quality of 
+				velocity interpolation schemes for marker-in-cell method and 3-D staggered grids, <em>Pure Appl. Geophys.</em>, 174: 3, 
+				1071-1089, doi:10.1007/s00024-016-1431-8. 
+				<a class="a_theme" target="_blank" href="https://link.springer.com/article/10.1007/s00024-016-1431-8">[link]</a></li>
+    
+			<li style="margin-bottom: 10px;">Kaus, B.J.P., Popov, A.A., Baumann, T.S., <strong>Pusok, A.E.</strong>, Bauville, A., 
+				Fernandez, N., Collignon, M. (2016), Forward and inverse modeling of lithospheric deformation on geological timescales, 
+				<em>NIC Symposium 2016 - Proceedings</em>, Vol. 48, edited by K. Binder, M. Müller, A. Schnurpfeil, p. 299-307. 
+				<a class="a_theme" target="_blank" href="https://www.blogs.uni-mainz.de/fb09-geosciences/files/2018/12/Kaus_etal_NIC.pdf">[link]</a></li>
+    
+			<li style="margin-bottom: 10px;"><strong>Pusok, A.E.</strong>, Kaus, B.J.P. (2015), Development of topography in 3-D 
+				continental collision models, <em>Geochem., Geophys., Geosyst.</em>, 16, doi:10.1002/2015GC005732. 
+				<a class="a_theme" target="_blank" href="https://agupubs.onlinelibrary.wiley.com/doi/full/10.1002/2015GC005732">[link]</a></li>
+</ol>
+
+<h3> Software </h3>
+<ul>
+	<li><strong>Pusok, A.E.</strong>, Li, Y., May, D., Katz, R. (2025), FD-PDE framework, morfault: v1.1.0. doi:10.5281/zenodo.15297276. 
+		<a class="a_theme" target="_blank" href="https://doi.org/10.5281/zenodo.15297276">[Zenodo repository]</a></li>
+
+    <li><strong>Pusok, A.E.</strong>, May, D., Li, Y., Katz, R. (2022), FD-PDE framework: v1.0.0. doi:10.5281/zenodo.6900871. 
+			<a class="a_theme" target="_blank" href="https://github.com/apusok/FD-PDE">[code repository]</a></li>
+</ul>
+
+<h3> Theses </h3>
+<ul>
+  <li>Three-dimensional numerical modeling of subduction/collision and lithospheric deformation <strong>(D.Phil. 2016)</strong>, JGU Mainz (reviewed by Kaus, B.J.P, Gerya, T., and Stegman, D.).</li>
+  <li>Porosity and compositionally-induced active convection beneath mid-ocean ridges <strong>(MEarthSci. 2012)</strong>, University of Oxford (examined by Parsons, B. and Woodhouse, J.).</li>
+</ul>
+
+<h3> Other </h3>
+<ul>
+  <li>What is FAIR for Geodynamics? EGU Blog - Geodynamics (July 2020). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2020/07/24/what-is-fair-for-geodynamics/">[link]</a></li>
+  <li>Writing the Methods Section, EGU Blog - Geodynamics (Sep 2019). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2019/09/20/writing-the-methods-section/">[link]</a></li>
+  <li>Demystifying the Peer-Review Process, EGU Blog - Geodynamics (Jan 2019). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2019/02/06/demystifying-the-peer-review-process/">[link]</a></li>
+  <li>White paper co-author: CTSP - Coupling of Tectonic and Surface Processes, Boulder CO (Sept 2018).</li>
+  <li>Making the most of the EGU General Assembly 2018, EGU Blog - Geodynamics (Apr 2018). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2018/04/04/making-the-most-of-the-egu-general-assembly-2018-as-a-geodynamicist-and-early-career-scientist/">[link]</a></li>
+  <li>Remarkable Regions - The India-Asia collision zone, EGU Blog - Geodynamics (Dec 2017). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2017/12/20/remarkable-regions-the-india-asia-collision-zone/">[link]</a></li>
+  <li>A Geodynamicist and an Early Career Scientist, EGU Blog - Geodynamics (Aug 2017). <a class="a_theme" target="_blank" href="https://blogs.egu.eu/divisions/gd/2017/08/02/a-geodynamicist-and-an-early-career-scientist/">[link]</a></li>
+</ul>
+
+			<div class="cta-buttons__container">
+				<Button href="/">Return Home</Button>
+			</div>
+		</TextSection>
+</Layout>
+
+<style>
+	.cta-buttons__container {
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.cta-buttons__container :global(a) {
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+	.code-buttons__container {
+		margin: 1rem auto;
+		display: flex;
+		flex-wrap: wrap;
+	}
+	.code-buttons__container > a {
+		margin-right: 1rem;
+		margin-bottom: 1rem;
+	}
+</style>
