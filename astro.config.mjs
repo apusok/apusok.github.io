@@ -7,7 +7,7 @@ import lit from "@astrojs/lit";
 // https://astro.build/config
 export default defineConfig({
   site: 'https://apusok.github.io',
-  base: '/github-pages',
+  base: '/apusok.github.io',
   sitemap: true, // Generate sitemap (set to "false" to disable)
   integrations: [sitemap(), mdx(), lit(), icon()], // Add renderers to the config
 });
