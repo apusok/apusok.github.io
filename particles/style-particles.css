@@ -1,6 +1,0 @@
-#particles-js
-{   
-    border-radius: var(--theme-shape-radius);
-    /* background: var(--theme-surface-1); */
-    position: relative;
-} /* adapt particle options in app.js */
