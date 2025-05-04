@@ -25,5 +25,9 @@
 		"date-fns": "^2.28.0",
 		"lit": "^3.1.2",
 		"prettier-plugin-astro": "^0.0.12"
-	}
+        "svgo": "2.8.0"
+	},
+    "dependencies": {
+        "bsky-embed": "^0.2.4"
+    }
 }
