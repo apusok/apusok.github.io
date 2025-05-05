@@ -65,11 +65,11 @@
 }
 :root {
   --font-size-sm: clamp(14.4px, 0.07vw + 14.13px, 15px);
-  --font-size-base: clamp(14.4px, 0.07vw + 14.13px, 15px);
-  --font-size-md: clamp(18px, 0.23vw + 17.09px, 20px);
-  --font-size-lg: clamp(22.5px, 0.47vw + 20.61px, 26.66px);
-  --font-size-xl: clamp(28.13px, 0.84vw + 24.76px, 35.54px);
-  --font-size-xxl: clamp(35.16px, 1.39vw + 29.6px, 47.37px);
+  --font-size-base: clamp(16.2px, 0.15vw + 15.61px, 17.5px);
+  --font-size-md: clamp(20.5px, 0.35vw + 18.85px, 23.33px);
+  --font-size-lg: clamp(25.5px, 0.65vw + 22.68px, 31.1px);
+  --font-size-xl: clamp(31.5px, 1.11vw + 27.18px, 41.45px);
+  --font-size-xxl: clamp(39.5px, 1.78vw + 32.41px, 55.26px);
   --font-size-xxxl: clamp(43.95px, 2.18vw + 35.22px, 63.15px);
 
   /* --font-size-sm: clamp(14.4px, 0.07vw + 14.13px, 15px);
