@@ -98,7 +98,7 @@ export const footerLists = [
 			},
 			{
 				title: 'Seafloor Explorer Seminars',
-				slug: '/apusok/seafloorseminar',
+				slug: 'https://seafloor-explorer.github.io',
 			},
 			{
 				title: 'The Royal Society',
