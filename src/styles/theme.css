@@ -4,11 +4,11 @@
 	--theme-primary-hover: #2b3c51;
 	--theme-on-primary: #fff;
 
-	--theme-bg: #eeeeee;
+	--theme-bg: #fff; /* #eeeeee; */
 	--theme-on-bg: #112138;
 
-	--theme-surface-1: #2b3c51;
-	--theme-on-surface-1: #fff;
+	--theme-surface-1: #eeeeee; /* #2b3c51; */
+	--theme-on-surface-1: #112138; /*  #fff;*/
 
 	--theme-surface-2: #5a7483;
 	--theme-on-surface-2: #fff;
