@@ -1,0 +1,35 @@
+---
+import Layout from "./Base.astro";
+import type { Props as BaseHeadProps } from "../components/head/BaseHead.astro";
+import HomeHeader from "../components/core/HomeHeader.astro";
+import Footer from "../components/core/Footer.astro";
+import Logo from "../components/Logo.astro";
+import settings from "../config/settings.js";
+import { footerLists, footerSocials } from "../config/footer.js";
+import "../styles/home.css";
+
+export interface Props {
+  seo?: BaseHeadProps;
+  pageClass?: string;
+}
+const { seo, pageClass = "home-page" } = Astro.props;
+---
+
+<Layout {seo}>
+  <HomeHeader slot="header" />
+  <div class={pageClass}>
+    <slot />
+  </div>
+  <Footer
+    slot="footer"
+    home
+    background="var(--theme-footer-bg)"
+    color="var(--theme-footer-color)"
+    {footerLists}
+    {footerSocials}
+    copyrightName={settings.name}
+    showPlug={settings.showPlug}
+  >
+    <Logo slot="logo" />
+  </Footer>
+</Layout>

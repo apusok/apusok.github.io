@@ -1,79 +1,94 @@
 ---
-import { Container, TextCardSection, FeatureCard } from '@components/odyssey-theme';
-
-import Layout from '../layouts/Page.astro';
-import HomeHeroSection from '../components/sections/heros/HomeHeroSection.astro';
-import settings from '../config/settings.js';
-import {ThemeSwitcher} from '../components/theme-switcher/theme-switcher';
+import Layout from "../layouts/Home.astro";
+import HomeHeroSection from "../components/sections/heros/HomeHeroSection.astro";
 ---
-<link rel="stylesheet" href="/particles/style-particles.css"></link>
 
 <Layout>
-	<!-- <div id="particles-js">
-		
-	<script type="text/javascript" src="/particles/particles.js"></script>
-	<script type="text/javascript" src="/particles/app.js"> </script> -->
+  <div class="home-wrap">
+    <HomeHeroSection />
 
-	<HomeHeroSection />
-	<Container>
-		<section class="feature-card__section">
-			<h3>Projects</h3>
-			<div class="feature-card__grid">
-				<FeatureCard href="/apusok/research" title="Research" imgSrc="../../assets/screenshots/research">
-				</FeatureCard>
-				<FeatureCard href="/apusok/software" title="Software" imgSrc="../../assets/screenshots/software">
-				</FeatureCard>
-			</div>
-		</section>
+    <section class="projects" id="projects" aria-labelledby="projects-title">
+      <div class="section-head"><h2 id="projects-title">Projects & Tools</h2></div>
+      <div class="cards">
+        <a class="card" href="/apusok/research/">
+          <div class="cardtop">
+            <span>01 / PROJECTS</span><span>DISCOVER</span>
+          </div>
+          <h3>Research</h3>
+          <p>
+            Gallery of models we use to investigate the dynamics of Earth's interior.
+          </p>
+          <span class="go"
+            ><svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M5 12h14M13 5l7 7-7 7"></path></svg
+            ></span
+          >
+        </a>
+        <a class="card" href="/apusok/software/">
+          <div class="cardtop">
+            <span>02 / NUMERICAL METHODS</span><span>EXPLORE</span>
+          </div>
+          <h3>Software</h3>
+          <p>
+            Computational tools for geodynamic modelling.
+          </p>
+          <span class="go"
+            ><svg
+              viewBox="0 0 24 24"
+              aria-hidden="true"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="1.8"
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              ><path d="M5 12h14M13 5l7 7-7 7"></path></svg
+            ></span
+          >
+        </a>
+      </div>
+    </section>
 
-		<h3>
-			News - Bluesky feed
-		</h3>
-		
-		<!-- <TextCardSection narrow style="z-index: 999; max-width:50%"> -->
-			
-		<script type="module" src="https://cdn.jsdelivr.net/npm/bsky-embed/dist/bsky-embed.es.js" async></script>
-		<bsky-embed
-    username="apusok.bsky.social"
-    mode=""
-    limit="3"
-    link-target="_blank"
-    link-image="true"
-    load-more="true"
-    disable-styles="false"
-    custom-styles=".border-slate-300 { border-color: #112138; background: #fff; z-index: 999; position:relative}"
-    date-format='{"type":"absolute","options":{"year":"numeric","month":"numeric","day":"numeric"}}'
-  >
-  </bsky-embed>
+    <section class="news" id="news" aria-labelledby="news-title">
+      <div class="news-intro">
+        <h2 id="news-title">News</h2>
+        <!-- <p>Updates from the group.</p> -->
+        <span class="placeholder-note">Updates from the group</span>
+      </div>
+      <div class="news-list">
+        <article class="news-item">
+          <span class="news-category">People</span>
+          <div>
+            <h3>Oct 12, 2026. Amrithaa Velayutham joins the group as MSc student in 2026-2027.</h3><p>
+              His project is entitled "Oceanic crustal production modulated by variations in seafloor spreading".
+            </p>
+          </div>
+        </article>
 
-<!-- </TextCardSection> -->
-
-<!-- 	<h3>
-		Website Themes
-	</h3>
-	{settings.enableThemeSwitcher && <ThemeSwitcher client:only/>} -->
-	</Container>
-
-<!-- </div> -->
-
+        <article class="news-item">
+          <span class="news-category">Research</span>
+          <div>
+            <h3>Research update headline</h3><p>
+              A short summary of a paper, project, or result.
+            </p>
+          </div>
+        </article>
+        
+        <!-- <article class="news-item">
+          <span class="news-category">Events</span>
+          <div>
+            <h3>Seminar or event headline</h3><p>
+              Details of an upcoming seminar, talk, or event.
+            </p>
+          </div>
+        </article> -->
+      </div>
+    </section>
+  </div>
 </Layout>
-
-<style>
-	.feature-card__section {
-		margin: var(--section-margin) auto;
-	}
-	.feature-card__grid {
-		display: grid;
-		grid-template-columns: repeat(2, 1fr);
-		gap: var(--theme-grid-gap);
-		font-family: 'Roboto Serif';
-	}
-	@media (max-width: 768px) {
-		.feature-card__grid {
-			grid-template-columns: 1fr;
-		}
-	}
-	.bsky_position {
-		z-index: 999;
-	}
-</style>

@@ -1,40 +1,57 @@
 :root {
-	/* Theme Colors */
-	--theme-primary:#112138;
-	--theme-primary-hover: #2b3c51;
+	/* Deep Slate & Mist, with the original warm orange accents. */
+	color-scheme: light;
+	--theme-primary: #2b3541;
+	--theme-primary-hover: #3b607d;
 	--theme-on-primary: #fff;
 
-	--theme-bg: #fff; /* #eeeeee; */
-	--theme-on-bg: #112138;
+	--theme-bg: #f7f8fa;
+	--theme-on-bg: #2b3541;
 
-	--theme-surface-1: #eeeeee; /* #2b3c51; */
-	--theme-on-surface-1: #112138; /*  #fff;*/
+	--theme-surface-1: #e7ecf1;
+	--theme-on-surface-1: #2b3541;
+	--theme-row-tint: #e7ecf199;
 
-	--theme-surface-2: #5a7483;
-	--theme-on-surface-2: #fff;
+	--theme-surface-2: #2b3541;
+	--theme-on-surface-2: #f8fafc;
+	--theme-link: #3b607d;
+	/* Keep existing components on the shared link colour. */
+	--theme-teal: var(--theme-link);
+	--theme-link-underline: #9cabb8;
+	--theme-muted: #596571;
+	--theme-line: #d5dce3;
+	--theme-control-border: #b9c8d6;
+	--theme-peach: #d58a69;
+	--theme-accent-soft: #dfb58a;
+	--theme-accent-on-dark: #efb38e;
+	--theme-footer-bg: #2b3541;
+	--theme-footer-color: #f8fafc;
+	--theme-footer-link: #edf2f7;
+	--theme-footer-muted: #ccd5df;
+	--theme-footer-affiliation: #dfe6ed;
+	--theme-on-dark-muted: #e1e8ef;
+	--theme-ink-rgb: 43 53 65;
 
 	/* Theme Shapes */
 	/* Set this to 0 if you want all of the rounded cards, images, etc to be straight edges */
-	--theme-shape-radius: clamp(1rem, 2rem, 3rem);
-	--theme-button-border-radius: 3rem;
+	--theme-shape-radius: 4px;
+	--theme-button-border-radius: 3px;
 
 	/* Theme Transition */
 	--theme-transition: 0.2s ease-in-out;
 
 	/* Theme Layout */
-	--section-margin: 3rem;
-	--theme-grid-gap: 1rem;
-	--container-max-width: 1440px;
-	--container-max-width-narrow: 960px;
-	--container-padding: 0 1rem;
+	--section-margin: clamp(3rem, 6vw, 5.25rem);
+	--theme-grid-gap: 1.125rem;
+	--container-max-width: 1432px;
+	--container-max-width-narrow: 1152px;
+	--container-padding: 0 clamp(1.125rem, 4vw, 3.5rem);
 
 	--theme-blog-post-header-width: 1200px;
 
 	/* Theme Fonts */
-	--theme-font-family-serif: 'Roboto Serif', Georgia, Cambria, 'Times New Roman',
-		Times, serif;
-	--theme-font-family-sans: 'Lato', -apple-system, BlinkMacSystemFont,
-		sans-serif;
+	--theme-font-family-serif: Georgia, 'Times New Roman', serif;
+	--theme-font-family-sans: Arial, Helvetica, sans-serif;
 }
 
 /* [data-theme='default'] {

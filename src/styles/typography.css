@@ -64,13 +64,13 @@
        url('/assets/fonts/lato-v23-latin-700italic.woff') format('woff'); /* Chrome 6+, Firefox 3.6+, IE 9+, Safari 5.1+ */
 }
 :root {
-  --font-size-sm: clamp(14.4px, 0.07vw + 14.13px, 15px);
-  --font-size-base: clamp(16.2px, 0.15vw + 15.61px, 17.5px);
-  --font-size-md: clamp(20.5px, 0.35vw + 18.85px, 23.33px);
-  --font-size-lg: clamp(25.5px, 0.65vw + 22.68px, 31.1px);
-  --font-size-xl: clamp(31.5px, 1.11vw + 27.18px, 41.45px);
-  --font-size-xxl: clamp(39.5px, 1.78vw + 32.41px, 55.26px);
-  --font-size-xxxl: clamp(43.95px, 2.18vw + 35.22px, 63.15px);
+  --font-size-sm: 0.8125rem;
+  --font-size-base: 16px;
+  --font-size-md: 1.25rem;
+  --font-size-lg: clamp(1.65rem, 2.6vw, 2.2rem);
+  --font-size-xl: clamp(2.1rem, 3.6vw, 2.75rem);
+  --font-size-xxl: clamp(2.75rem, 5.4vw, 4.75rem);
+  --font-size-xxxl: clamp(3rem, 6vw, 5rem);
 
   /* --font-size-sm: clamp(14.4px, 0.07vw + 14.13px, 15px);
   --font-size-base: clamp(18px, 0.23vw + 17.09px, 20px);
@@ -83,11 +83,12 @@
 
 html,
 body {
-	line-height: 1.5;
+	line-height: 1.85;
 	font-family: var(--theme-font-family-sans);
 	font-size: var(--font-size-base);
 	color: var(--theme-on-bg);
-  font-weight: 300;
+  font-weight: 400;
+  -webkit-font-smoothing: antialiased;
 } 
 
 h1,
@@ -95,6 +96,8 @@ h2,
 h3 {
 	font-family: var(--theme-font-family-serif);
 	font-weight: 400;
+	letter-spacing: -0.035em;
+	text-wrap: pretty;
 }
 
 h1 {
@@ -111,12 +114,13 @@ h3 {
 
 h1,
 h2 {
-	line-height: 1.1;
-	font-weight: 700;
+	line-height: 1.12;
+	font-weight: 400;
 }
 
 h3 {
-	font-weight: 500;
+	font-weight: 400;
+	line-height: 1.25;
 }
 
 h6 {

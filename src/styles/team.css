@@ -1,0 +1,338 @@
+/* Team page: approved member cards, shared homepage typography, and compact alumni tables. */
+.team-page {
+  font-size: 18px;
+  line-height: 1.7;
+  overflow-wrap: break-word;
+}
+.team-page .team-wrap {
+  width: min(1360px, calc(100% - 80px));
+  margin-inline: auto;
+}
+.team-page h1,
+.team-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+}
+.team-page .team-heading {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 24px;
+  padding: 36px 0 26px;
+}
+.team-page h1 {
+  font-size: clamp(40px, 4.3vw, 64px);
+  line-height: 1.07;
+  letter-spacing: -0.047em;
+  margin: 0;
+}
+.team-page h1 em {
+  color: var(--theme-teal);
+  font-weight: 400;
+}
+.team-page a {
+  color: var(--theme-teal);
+  text-decoration-color: var(--theme-link-underline);
+  text-underline-offset: 4px;
+}
+.team-page .section-jump {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 17px;
+  text-decoration: none;
+  white-space: nowrap;
+}
+.team-page .section-jump svg {
+  width: 17px;
+  height: 17px;
+}
+.team-page .member-card {
+  display: grid;
+  grid-template-columns: 144px minmax(0, 1fr);
+  align-items: start;
+  gap: 25px;
+  padding: 26px;
+  border: 1px solid var(--theme-line);
+  background: #fff;
+  border-radius: 3px;
+  min-width: 0;
+}
+.team-page .member-card--lead {
+  grid-template-columns: 180px minmax(0, 1fr);
+  align-items: center;
+  gap: 36px;
+  padding: 26px 32px;
+  background: var(--theme-surface-1);
+}
+.team-page .member-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 18px;
+  margin-top: 18px;
+}
+.team-page .member-photo {
+  margin: 0;
+  padding: 6px;
+  border: 1px solid var(--theme-line);
+  border-radius: 3px;
+  background: var(--theme-bg);
+}
+.team-page .member-photo img {
+  display: block;
+  width: 100%;
+  height: auto;
+  border-radius: 1px;
+}
+.team-page .member-content {
+  min-width: 0;
+}
+.team-page .member-name {
+  font-size: 35px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+  margin: 0 0 13px;
+  color: var(--theme-on-bg);
+}
+.team-page .member-details {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--theme-muted);
+}
+.team-page .member-details li {
+  margin: 0;
+  padding: 0;
+}
+.team-page .member-details li + li {
+  margin-top: 9px;
+}
+.team-page .member-details li:first-child {
+  color: var(--theme-on-bg);
+}
+.team-page .member-details a {
+  font-size: 17px;
+}
+.team-page .member-contact {
+  margin: 17px 0 0;
+  color: var(--theme-on-bg);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.team-page .member-contact a {
+  font-weight: 400;
+}
+.team-page .past-members {
+  margin-top: 34px;
+  padding-top: 28px;
+  border-top: 1px solid var(--theme-line);
+  scroll-margin-top: 24px;
+}
+.team-page .past-title {
+  font-size: 42px;
+  line-height: 1.15;
+  letter-spacing: -0.04em;
+  margin: 0 0 24px;
+}
+.team-page .team-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 22px 0 36px;
+  border-top: 1px solid var(--theme-line);
+}
+.team-page .return-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--theme-primary);
+  color: #fff;
+  border-radius: 3px;
+  padding: 13px 19px;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.team-page .return-home:hover {
+  background: var(--theme-teal);
+}
+.team-page .return-home svg {
+  width: 18px;
+  height: 18px;
+}
+.team-page .back-top {
+  font-size: 17px;
+  text-decoration: none;
+}
+@media (max-width: 1150px) {
+  .team-page .team-wrap {
+    width: calc(100% - 56px);
+  }
+  .team-page h1 {
+    font-size: clamp(39px, 4.7vw, 54px);
+  }
+  .team-page .member-card {
+    grid-template-columns: 116px minmax(0, 1fr);
+    gap: 20px;
+    padding: 22px;
+  }
+  .team-page .member-card--lead {
+    grid-template-columns: 166px minmax(0, 1fr);
+    gap: 30px;
+    padding: 25px;
+  }
+}
+@media (max-width: 900px) {
+  .team-page h1 {
+    font-size: clamp(42px, 7vw, 62px);
+  }
+  .team-page .member-grid {
+    grid-template-columns: 1fr;
+  }
+  .team-page .member-card {
+    grid-template-columns: 150px minmax(0, 1fr);
+    gap: 26px;
+  }
+  .team-page .member-card--lead {
+    grid-template-columns: 166px minmax(0, 1fr);
+  }
+}
+@media (max-width: 600px) {
+  .team-page .team-wrap {
+    width: calc(100% - 36px);
+  }
+  .team-page {
+    font-size: 17px;
+  }
+  .team-page .team-heading {
+    flex-wrap: wrap;
+    padding: 28px 0 23px;
+    gap: 14px;
+  }
+  .team-page h1 {
+    font-size: clamp(37px, 8.5vw, 49px);
+  }
+  .team-page .member-card,
+  .team-page .member-card--lead {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    padding: 20px;
+  }
+  .team-page .member-photo {
+    width: 132px;
+  }
+  .team-page .member-card--lead .member-photo {
+    width: 150px;
+  }
+  .team-page .member-contact {
+    font-size: 17px;
+  }
+  .team-page .past-title {
+    font-size: 36px;
+  }
+  .team-page .past-members {
+    margin-top: 28px;
+    padding-top: 25px;
+  }
+  .team-page .team-actions {
+    padding-bottom: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .team-page *,
+  .team-page *::before,
+  .team-page *::after {
+    transition: none !important;
+  }
+}
+/* Compact name-and-details tables, following the About page's CV rows. */
+.team-page .alumni-group + .alumni-group {
+  margin-top: 24px;
+}
+.team-page .alumni-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-size: 18px;
+  line-height: 1.7;
+}
+.team-page .alumni-table caption {
+  caption-side: top;
+  text-align: left;
+  padding: 13px 18px;
+  margin-bottom: 6px;
+  border-left: 2px solid var(--theme-peach);
+  background: var(--theme-surface-1);
+  color: var(--theme-muted);
+  font-size: 18px;
+  line-height: 1.7;
+}
+.team-page .alumni-table th,
+.team-page .alumni-table td {
+  vertical-align: top;
+  text-align: left;
+  padding: 13px 0;
+}
+.team-page .alumni-table th {
+  width: 220px;
+  padding-right: 28px;
+  color: var(--theme-teal);
+  font-weight: 500;
+  padding-left: 18px;
+}
+.team-page .alumni-table tr + tr th,
+.team-page .alumni-table tr + tr td {
+  border-top: 1px solid var(--theme-line);
+}
+.team-page .alumni-table td {
+  color: var(--theme-muted);
+}
+.team-page .alumni-detail {
+  position: relative;
+  padding-left: 21px;
+  border-left: 1px solid var(--theme-line);
+}
+.team-page .alumni-detail::before {
+  content: "";
+  position: absolute;
+  width: 7px;
+  height: 7px;
+  top: 10px;
+  left: -4px;
+  border-radius: 50%;
+  background: var(--theme-peach);
+}
+@media (max-width: 900px) {
+  .team-page .alumni-table th {
+    width: 185px;
+    padding-right: 24px;
+    padding-left: 18px;
+  }
+}
+@media (max-width: 600px) {
+  .team-page .alumni-table,
+  .team-page .alumni-table caption {
+    font-size: 17px;
+  }
+  .team-page .alumni-table caption {
+    padding: 12px 15px;
+  }
+  .team-page .alumni-table th {
+    width: 120px;
+    padding-right: 14px;
+    padding-left: 14px;
+  }
+  .team-page .alumni-table th,
+  .team-page .alumni-table td {
+    padding-top: 11px;
+    padding-bottom: 11px;
+  }
+  .team-page .alumni-detail {
+    padding-left: 15px;
+  }
+  .team-page .alumni-group + .alumni-group {
+    margin-top: 20px;
+  }
+}

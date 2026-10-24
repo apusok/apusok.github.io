@@ -1,0 +1,63 @@
+---
+export interface Props {
+  videoId: string;
+  title: string;
+  poster: string;
+}
+
+const { videoId, title, poster } = Astro.props;
+const watchUrl = `https://www.youtube.com/watch?v=${videoId}`;
+const embedUrl = `https://www.youtube.com/embed/${videoId}`;
+---
+
+<div class="research-video">
+  <a
+    class="research-video-trigger"
+    href={watchUrl}
+    target="_blank"
+    rel="noopener"
+    aria-label={`Play video: ${title}`}
+    data-embed-url={embedUrl}
+    data-video-title={title}
+  >
+    <img src={poster} alt="" width="1280" height="720" loading="lazy" />
+    <span class="research-video-play" aria-hidden="true">
+      <svg viewBox="0 0 24 24" fill="currentColor"
+        ><path d="m9 5 11 7-11 7z"></path></svg
+      >
+    </span>
+    <span class="research-video-label" aria-hidden="true">Play video</span>
+  </a>
+</div>
+<div class="research-video-actions">
+  <a class="research-video-link" href={watchUrl} target="_blank" rel="noopener">
+    Watch on YouTube <span aria-hidden="true">↗</span>
+  </a>
+</div>
+
+<script>
+  document.querySelectorAll(".research-video-trigger").forEach((trigger) => {
+    if (!(trigger instanceof HTMLAnchorElement)) return;
+
+    trigger.addEventListener("click", (event) => {
+      // A directly opened concept file can still use the original YouTube link.
+      if (!["http:", "https:"].includes(window.location.protocol)) return;
+      if (!trigger.dataset.embedUrl) return;
+
+      event.preventDefault();
+      const url = new URL(trigger.dataset.embedUrl);
+      url.searchParams.set("autoplay", "1");
+      url.searchParams.set("playsinline", "1");
+
+      const player = document.createElement("iframe");
+      player.src = url.href;
+      player.title = trigger.dataset.videoTitle || "Research video";
+      player.allow =
+        "accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share";
+      player.allowFullscreen = true;
+      player.referrerPolicy = "strict-origin-when-cross-origin";
+      trigger.replaceWith(player);
+      player.focus();
+    });
+  });
+</script>

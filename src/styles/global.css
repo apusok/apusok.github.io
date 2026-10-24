@@ -1,33 +1,194 @@
-html,
-body {
-	height: 100%;
+html {
+	scroll-padding-top: 2rem;
 }
 
 body {
-	max-width: 1920px;
-	margin: 0 auto;
+	margin: 0;
 	background-color: var(--theme-bg);
 	position: relative;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+}
+
+main {
+	flex: 1;
+	min-width: 0;
+}
+
+::selection {
+	background: #dfb58a66;
+	color: var(--theme-on-bg);
+}
+
+a {
+	text-underline-offset: 0.22em;
+	text-decoration-thickness: 1px;
+	transition: color var(--theme-transition), background-color var(--theme-transition);
+}
+
+a:hover {
+	color: var(--theme-teal);
+}
+
+:focus-visible {
+	outline: 3px solid var(--theme-peach);
+	outline-offset: 5px;
+}
+
+p {
+	color: var(--theme-muted);
+}
+
+li + li {
+	margin-top: 0.45rem;
+}
+
+ul,
+ol {
+	padding-left: 1.4rem;
+}
+
+li::marker {
+	color: var(--theme-teal);
+}
+
+video {
+	display: block;
+	max-width: 100%;
+	height: auto;
 }
 
 pre {
-  padding: 1em;
-  border-radius: 0.5em;
-  overflow: auto;
+	padding: 1em;
+	border: 1px solid var(--theme-line);
+	border-radius: var(--theme-shape-radius);
+	overflow: auto;
 }
 
 pre .language-id {
-  display: none;
+	display: none;
 }
 
 .a_theme {
-	color: #4e7150;
+	color: var(--theme-teal);
+	text-decoration-color: var(--theme-link-underline);
 }
 
 .h_theme {
-	color: #112138;
+	color: var(--theme-on-bg);
 }
 
 .t_theme {
-	font-family: 'Roboto Serif';
+	font-family: var(--theme-font-family-serif);
+}
+
+#page {
+	padding-bottom: clamp(3rem, 6vw, 5rem);
+	overflow-wrap: break-word;
+}
+
+#page h1,
+#page > .content__container > .text__section > h2:first-child {
+	margin-bottom: 1.75rem;
+}
+
+#page .text__section > h3,
+#page .constrained-text-hero__section > .content__container > h3 {
+	margin-top: 2.75rem;
+	padding-top: 1.75rem;
+	border-top: 1px solid var(--theme-line);
+}
+
+.cta-buttons__container {
+	margin-top: 2.5rem;
+}
+
+/* Keep scientific figures and embeds fully visible inside split layouts. */
+.text-and-image__image,
+.hero-section__image,
+.text-and-image__text,
+.hero-section__text {
+	min-width: 0;
+}
+
+.text-and-image__image .content__container,
+.constrained-text-hero__section .content__container .content__container {
+	padding: 0;
+}
+
+.text-and-image__image .youtube-embed__section {
+	margin: 1.5rem 0;
+}
+
+#page[data-page='team'] .text-and-image__image img {
+	border-radius: 90px 90px 4px 4px;
+}
+
+#page[data-page='team'] .text-and-image__text ul {
+	margin: 0.75rem 0;
+}
+
+#page[data-page='team'] .text-and-image__text h4 {
+	font-size: 0.875rem;
+	font-weight: 400;
+}
+
+#page[data-page='software'] .text-and-image__section {
+	grid-template-columns: minmax(140px, 0.25fr) minmax(0, 1fr);
+}
+
+#page[data-page='publications'] .text__section > ol,
+#page[data-page='publications'] .text__section > ul {
+	margin: 1.5rem 0 2.75rem;
+}
+
+#page[data-page='publications'] .text__section > ol > li,
+#page[data-page='publications'] .text__section > ul > li {
+	padding: 1.25rem 0 1.25rem 0.5rem;
+	border-bottom: 1px solid var(--theme-line);
+	margin: 0;
+	color: var(--theme-muted);
+}
+
+#page[data-page='publications'] strong {
+	color: var(--theme-on-bg);
+}
+
+#page[data-page='about'] table {
+	width: 100%;
+	font-size: 0.9375rem;
+	line-height: 1.7;
+}
+
+#page[data-page='about'] table td {
+	padding: 1.125rem 0;
+	vertical-align: top;
+}
+
+#page[data-page='about'] table tr + tr {
+	border-top: 1px solid var(--theme-line);
+}
+
+#page[data-page='about'] table td:first-child {
+	width: 11rem;
+	color: var(--theme-teal);
+}
+
+@media (max-width: 600px) {
+	.constrained-text-hero__section > .content__container {
+		padding: 0;
+	}
+
+	#page[data-page='software'] .text-and-image__section {
+		grid-template-columns: 1fr;
+	}
+
+	#page[data-page='about'] table td:first-child {
+		width: 7.25rem;
+	}
+
+	#page[data-page='about'] table td:nth-child(2) {
+		display: none;
+	}
 }

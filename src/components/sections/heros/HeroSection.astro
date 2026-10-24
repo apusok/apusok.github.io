@@ -17,15 +17,14 @@ import { Container } from '@components/odyssey-theme';
 <style>
 	.hero-section__section {
 		margin: var(--section-margin) auto;
-		min-height: clamp(90vh, 100vw, calc(100vh - var(--navbar-height)));
 		display: grid;
-		grid-template-columns: 1fr 1fr;
+		grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr);
 		align-items: center;
-		gap: 1rem;
+		gap: clamp(2rem, 6vw, 6rem);
 	}
 	.hero-section__text {
-		justify-self: center;
-		max-width: 25rem;
+		justify-self: start;
+		max-width: 36rem;
 	}
 	.hero-btns__container {
 		display: flex;
@@ -37,13 +36,17 @@ import { Container } from '@components/odyssey-theme';
 	}
 	.hero-section__image {
 		display: flex;
+		justify-content: center;
+	}
+	.hero-section__image :global(picture) {
+		width: min(100%, 340px) !important;
 	}
 	.hero-section__image :global(img) {
 		width: 100%;
-		height: 100%;
-		max-height: 80vh;
-		object-fit: cover;
-		border-radius: var(--theme-shape-radius);
+		height: auto;
+		object-fit: contain;
+		border-radius: 180px 180px 4px 4px;
+		box-shadow: 0 20px 45px rgb(var(--theme-ink-rgb) / 0.08);
 	}
 	@media (max-width: 768px) {
 		.hero-section__section {

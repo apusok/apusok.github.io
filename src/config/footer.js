@@ -93,10 +93,6 @@ export const footerLists = [
 		title: 'Other links',
 		items: [
 			{
-				title: 'Oxford Earth Sciences',
-				slug: 'https://www.earth.ox.ac.uk',
-			},
-			{
 				title: 'Seafloor Explorer Seminars',
 				slug: 'https://seafloor-explorer.github.io',
 			},

@@ -4,42 +4,53 @@ const {href, imgSrc, title} = Astro.props;
 
 <style>
   .feature-card__card {
-    background-color: var(--theme-surface-1);
+    background-color: #fff;
     color: var(--theme-on-surface-1);
     border-radius: var(--theme-shape-radius);
+    border: 1px solid var(--theme-line);
+    transition: transform var(--theme-transition), box-shadow var(--theme-transition);
+    overflow: hidden;
+  }
+  .feature-card__card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 20px 42px rgb(var(--theme-ink-rgb) / 0.07);
   }
   .feature-card__link {
     display: block;
     text-decoration: none;
+    height: 100%;
   }
   .featured-card__content {
-    padding: 1rem 1rem 0 1rem;
+    position: relative;
+    padding: clamp(1.25rem, 3vw, 2rem);
      display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    overflow-y: hidden;
+    align-items: stretch;
+    gap: 1rem;
   }
   .featured-card__content picture {
     width: 100%;
-    height: 100%;
   }
   .feature-card__card .feature-card__img {
-    --image-shadow: 0 -0.5rem 1rem rgba(138, 138, 138, 0.12);
     margin: 0 auto;
-    width: clamp(60%, 70%, 390px);
+    width: 100%;
     height: auto;
-    object-fit: cover;
-    /* border-radius: 1rem 1rem 0 0; */
-    box-shadow: var(--image-shadow);
-    transform: translateY(0.5rem);
-    transition: transform var(--theme-transition);
-  }
-  .feature-card__card:hover .feature-card__img {
-    transform: translateY(0);
+    object-fit: contain;
+    border: 1px solid var(--theme-line);
   }
   .feature-card__title {
     font-family: var(--theme-font-family-serif);
+    font-size: var(--font-size-lg);
+    margin: 0;
+    padding-right: 2rem;
+  }
+  .card-arrow {
+    position: absolute;
+    right: clamp(1.25rem, 3vw, 2rem);
+    top: clamp(1.5rem, 3.5vw, 2.5rem);
+    width: 22px;
+    height: 22px;
+    color: var(--theme-teal);
   }
 </style>
 
@@ -48,6 +59,7 @@ const {href, imgSrc, title} = Astro.props;
   <a class="feature-card__link" href={href}>
     <div class="featured-card__content">
       <h3 class="feature-card__title">{title}</h3>
+      <svg class="card-arrow" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M5 12h14M13 5l7 7-7 7" /></svg>
       <!-- I would like to swap this out with Astro's Image integration soon but was having some issues with it at the moment so we're going old school here. -->
       <picture>
         <source srcset={`${imgSrc}.webp`} type="image/webp" >

@@ -1,335 +1,840 @@
 ---
-import { Icon } from 'astro-icon/components';
-import { 
-	Container, 
-	Button,
-  TextCardSection,
-	YouTubeEmbedSection, 
-  TextSection } from '@components/odyssey-theme';
-import Layout from '../../layouts/Page.astro';
-import TextAndImageHero from '../../components/sections/heros/TextAndImageHero.astro';
+import Layout from "../../layouts/Home.astro";
+import ResearchVideo from "../../components/core/ResearchVideo.astro";
+import "../../styles/research.css";
 
 const seo = {
-  title: `Research | A Pusok`,
-  description: `Research`,
+  title: "Research | A Pusok",
+  description: "Research",
 };
 ---
 
-<Layout seo={seo}>
-
-	<TextSection narrow>
-		<h1>Research Projects</h1> 
-		
-		The projects below have been done in collaboration with many scientists that I've been fortunate 
-		to work with, learn and share ideas. A complete list of collaborators can be found in 
-		<a class="a_theme" target="_blank" href="https://scholar.google.com/citations?user=AojkhEwAAAAJ&hl=en">Google Scholar</a>
-    <ul></ul>
-    <p>
-      <em>Overview:</em> Oceanic crust and most of volcanism on Earth are produced at mid-ocean ridges, an underwater mountain chain where two tectonic plates 
-      separate. Basic theories suggest that hot material within the Earth's interior rises passively, melts and then cools 
-      down to create oceanic crust. However, past decade geophysical surveys revealed that magma has a more dynamic character and 
-      its journey from the mantle to the surface is intrinsically more complex than previously thought. We model the interaction between melt and the 
-      solid rock to address questions related to generation, transport and extrusion/emplacement of melt in the lithosphere. 
-    </p>
-  </TextSection>
-
-  
-
-  <TextAndImageHero>
-		<div slot="text-container">
-			<h3>Melt extraction in the Turkana Depression</h3>
-			<p>Turkana Depression shows widespread diffuse faulting and volcanism, in contrast to the narrow rift architecture in the Ethiopian Plateau.
-        It also experienced two episodes of rifting prior to flood-basalt magmatism, likely thinning and weakening the lithosphere.
-        Here, we propose that lithospheric strength (rheology) has a strong control on melt extraction and this can explain the anomalous 
-        rift architecture in the Turkana Depression, East African Rift. This work represents one of the 
-        first physically-consistent rift model with magma transport.</p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025GL115228" customIcon
-      newTab > Pusok et al. (GRL, 2025) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-			<Button href="https://github.com/apusok/FD-PDE/tree/main/models/morfault" newTab customIcon
-				> Github code: morfault <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container">
-			<img
-				src="../../../assets/img/turkana.png"
-				alt="OceanMelt"
-				id="home-hero-image"
-			/>
-			<YouTubeEmbedSection url="https://www.youtube.com/watch?v=nljzT88Yngg" rounded/>
-		</picture>
-	</TextAndImageHero>
-
-	<TextAndImageHero reversed>
-		<div slot="text-container">
-			<h3 >RS URF Project: Making the Ocean Floor</h3>
-			<p>The project aims to understand the interaction between magmatism and tectonics in 
-        oceanic settings. Motivated by the most recent observations from the ocean floor, we 
-        plan to develop physics-based models that capture the details of magma generation in 
-        the mantle and how it travels to the surface to create and shape the seafloor. (2024-2031)</p>
-		</div>
-		<!-- <div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>Get Started <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button
-			>
-		</div> -->
-		<picture slot="image-container">
-			<img
-				src="../../../assets/img/RSurf_overview.png"
-				alt="OceanMelt"
-				id="home-hero-image"
-			/>
-		</picture>
-	</TextAndImageHero>
-
-	<TextAndImageHero>
-		<div slot="text-container">
-			<h3 style="font-size: var(--font-size-lg);">Convective flow at the LAB</h3>
-			<p>A classic problem in geophysics, what is the nature of the lithosphere-asthenosphere boundary (LAB)? 
-        The LAB is the boundary between tectonic plates and the convecting mantle below, but also marks a transition 
-        between heat transport by conduction in the lithosphere and by convection in the asthenosphere.
-        Multiple geophysical observations suggest a weaker and shallower LAB. Small melt fractions enriched in volatiles (water, carbon dioxide) 
-        may explain these geophysical observations and the geochemistry of intraplate volcanoes. 
-        Right: two-phase flow models show how volatile-assisted melting impacts convective flow in the asthenosphere.
-      </p>
-		</div>
-		<!-- <div slot="btns-container">
-			<Button href="/theme/get-started" customIcon
-				>Get Started <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button
-			>
-		</div> -->
-		<picture slot="image-container" style="width: 100%;">
-			<img 
-				src="../../../assets/img/LABconvect.png"
-				alt="OceanMelt"
-				id="home-hero-image"
-			/>
-		</picture>
-	</TextAndImageHero>
-
-	<TextAndImageHero reversed>
-		<div slot="text-container">
-			<h3 >Buoyancy-driven flow at mid-ocean ridges</h3>
-			<p>Mid-ocean ridge model to investigate buoyancy-driven flow due to porosity, 
-        composition, and temperature. Right: simulation showing development of asymmetry beneath 
-        ridge axis and small-scale convection at the lithosphere-asthenosphere boundary. 
-        Top panel represents melt fraction (porosity); bottom panel represents bulk density relative 
-        to reference solid mantle.</p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://academic.oup.com/gji/advance-article/doi/10.1093/gji/ggac309/6671556" newTab customIcon
-				> Pusok et al. (GJI, 2022) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-			<Button href="https://github.com/apusok/FD-PDE/tree/main/models/mbuoy3" newTab customIcon
-				> Github code: mbuoy3 <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container">
-			<YouTubeEmbedSection url="https://www.youtube.com/watch?v=hoBybmiXkzs" rounded/>
-      Source: Adina Pusok. © Foalab.
-		</picture>
-	</TextAndImageHero>
-
-	<TextAndImageHero>
-		<div slot="text-container">
-			<h3 style="font-size: var(--font-size-lg);">RIFT-O-MAT Project: Magma dynamics at mid-ocean ridges and rifts</h3>
-			<p> How does magmatism promote and shape rifts in continental and oceanic lithosphere? 
-        In this project (PI Richard Katz, U. Oxford), we focused on magma generation and transport at spreading ridges, 
-        but also on deformation of the host rock to investigate processes such as diking and faulting. 
-        We also developed numerical tools (FD-PDE framework) that are suitable for magma dynamics 
-        theory with visco-elasto-plastic rheology. (2019-2024)
-      </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="http://foalab.earth.ox.ac.uk" newTab customIcon
-				> Foalab website <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-			<Button href="https://github.com/apusok/FD-PDE" newTab customIcon
-				> Github code: FD-PDE framework <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-			<Button href="https://academic.oup.com/gji/article/234/3/2007/7136153?login=false" newTab customIcon
-				> Li et al. (GJI, 2023) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-      <Button href="https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3504/" newTab customIcon
-				> Li et al. (GMD, 2025) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container">
-			<YouTubeEmbedSection url="https://www.youtube.com/watch?v=rFhb6mFEZNg" rounded/>
-      Overview of poro-viscoelasto-viscoplastic flow theory. Source: Yuan Li. © Foalab.
-		</picture>
-	</TextAndImageHero>
-
-  <TextAndImageHero reversed>
-		<div slot="text-container">
-			<h3 >Guide to 101 Geodynamics</h3>
-			<p>During the COVID pandemic, we (the authors) transformed a short EGU course into this collaborative 
-        perspectives paper on methods, practices, and philosophy of geodynamic modelling. The paper aims to be 
-        an introduction to geodynamic modelling for students and non-geodynamicists, but also invites feedback 
-        from a more expert audience. </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://se.copernicus.org/preprints/se-2021-14/" newTab customIcon
-				> van Zelst et al. (Solid Earth, 2022) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-			<picture slot="image-container" style="width: 100%;">
-        <img 
-          src="../../../assets/img/ModellingFlow.png"
-          alt="101gd"
-          id="home-hero-image"
-        />
-		</picture> 
-	</TextAndImageHero>
-
-
-  <TextAndImageHero>
-		<div slot="text-container">
-			<h3>Sediments and style of convergent margins</h3>
-			<p> Subduction zones represent the only major pathway by which continental material (sediments) can be 
-        returned to the Earth's mantle. When sediments are considered, convergent margins appear to fall into 
-        one of two classes: accretionary and erosive. In this study, we run 2-D subduction simulations to 
-        investigate how sediment fluxes influence subduction dynamics and plate coupling.
-      </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://se.copernicus.org/articles/13/1455/2022/se-13-1455-2022.html" newTab customIcon
-				> Pusok et al. (Solid Earth, 2022) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container">
-      <img 
-        src="../../../assets/img/MSubdSed-results01-03-04_03.jpg"
-        alt="101gd"
-        id="home-hero-image"
-      />
-  </picture> 
-	</TextAndImageHero>
-
-  <TextAndImageHero reversed>
-		<div slot="text-container">
-			<h3 >India-Asia convergence history and double subduction</h3>
-			<p>Same-dip double subduction is a special tectonic configuration, where two slabs dip in the same direction. 
-        Examples exist for the India-Asia and the present day Ryukyu-Izu-Bonin-Mariana (Pacific, Philippines Sea Plates) 
-        settings. We run 2-D and 3-D models to investigate the formation and stability of double subduction, and we 
-        propose a new sequence of events for the India-Asia convergence history. </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JB017027" newTab customIcon
-				> Pusok and Stegman (JGR, 2019) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-        <Button href="https://advances.sciencemag.org/content/6/19/eaaz8681" newTab customIcon
-				> Pusok and Stegman (Sci. Adv., 2020) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-			<picture slot="image-container">
-        <img src="../../../assets/img/Mdouble.png" alt="101gd" id="home-hero-image" />
-		</picture> 
-	</TextAndImageHero>
-
-  <TextAndImageHero>
-		<div slot="text-container">
-			<h3>Topography in 3-D continental collision models</h3>
-			<p> The Himalayas, the Tibetan Plateau, or the Andes are remarkable features on the surface of the Earth. However, it is unclear how they 
-        formed or why they are so high. In this project, we ran lots of 3-D simulations of subduction/collision to understand how high topography 
-        (>5km) is formed. And it turns out it's not so easy to build topography in numerical models. However, we do provide semi-analytical insights 
-        on the conditions necessary for building high mountains and plateaus.
-      </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://onlinelibrary.wiley.com/doi/full/10.1002/2015GC005732" newTab customIcon
-				> Pusok and Kaus (G-cubed, 2015) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container" style="width:90%">
-      <img 
-        src="../../../assets/img/MTopo.png"
-        alt="101gd"
-        id="home-hero-image"
-      />
-  </picture> 
-	</TextAndImageHero>
-
-  <TextAndImageHero reversed>
-		<div slot="text-container">
-			<h3 >Rheological approximations in 3-D subduction-collision models</h3>
-			<p>Rocks deform in a visco-elasto-plastic manner, which is difficult to solve numerically (nonlinear system) and the coefficients are poorly 
-        constrained from observations and laboratory experiments. So, previous numerical studies used various approximations for rock rheology. 
-        In this study, we investigate the effect of such rheological approximations in a 3-D subduction/collision model. </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://www.sciencedirect.com/science/article/pii/S0040195118301604" newTab customIcon
-				> Pusok et al. (Tectonophys., 2018) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-			<picture slot="image-container">
-        <img src="../../../assets/img/abstract-strain_rate.jpg" alt="101gd" id="home-hero-image" />
-		</picture> 
-	</TextAndImageHero>
-
-  <TextAndImageHero>
-		<div slot="text-container">
-			<h3>Numerical methods for computational geodynamics </h3>
-			<p>Part of my research involves developing the numerical techniques employed. By knowing and mastering the tools I am using, my work can achieve far 
-        better quality, a principle I try to follow and instill in others. Topics: numerical methods for single/two-phase flow theory, finite difference 
-        discretisation scheme, non-linear solvers for complex rheology.
-      </p>
-		</div>
-		<div slot="btns-container">
-			<Button href="https://link.springer.com/article/10.1007/s00024-016-1431-8" newTab customIcon
-				> Pusok et al. (PAAG, 2017) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-        <Button href="https://www.blogs.uni-mainz.de/fb09-geosciences/files/2018/12/Kaus_etal_NIC.pdf" newTab customIcon
-				> LaMEM - Kaus et al. (2016) <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-        <ul></ul>
-        <Button href="https://bitbucket.org/bkaus/lamem/src/master/" newTab customIcon
-				> Bitbucket: LaMEM <Fragment slot="icon">
-					<Icon name="ic:baseline-chevron-right" />
-				</Fragment></Button>
-		</div>
-		<picture slot="image-container" style="width:100%">
-      <img 
-        src="../../../assets/img/MMethods.jpg"
-        alt="101gd"
-        id="home-hero-image"
-      />
-  </picture> 
-	</TextAndImageHero>
-
-  <TextSection>
-    <div class="cta-buttons__container">
-      <Button href="/">Return Home</Button>
+<Layout {seo} pageClass="research-page">
+  <div class="research-wrap" id="research-top">
+    <div class="research-intro">
+      <div>
+        <h1>Research <em>Projects</em></h1><p class="research-collaboration">
+          The projects below have been done in collaboration with many
+          scientists that I've been fortunate to work with, learn from and share
+          ideas. A complete list of collaborators can be found in
+          <a
+            class="a_theme"
+            target="_blank"
+            href="https://scholar.google.com/citations?user=AojkhEwAAAAJ&amp;hl=en"
+            >Google Scholar</a>.
+        </p>
+      </div>
+      <aside class="research-overview" aria-label="Research overview">
+        <p>
+          <em>Overview:</em> Oceanic crust and most of volcanism on Earth are produced
+          at mid-ocean ridges, an underwater mountain chain where two tectonic plates
+          separate. Basic theories suggest that hot material within the Earth's interior
+          rises passively, melts and then cools down to create oceanic crust. However,
+          past decade geophysical surveys revealed that magma has a more dynamic
+          character and its journey from the mantle to the surface is intrinsically
+          more complex than previously thought. We model the interaction between
+          melt and the solid rock to address questions related to generation, transport
+          and extrusion/emplacement of melt in the lithosphere.
+        </p>
+      </aside>
     </div>
-  </TextSection>
 
+    <div class="research-projects">
+      <article
+        class="project-entry project-entry--featured"
+        id="turkana-depression"
+        aria-labelledby="turkana-depression-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article/Model</div>
+          <h2 id="turkana-depression-title">
+            Melt extraction in the Turkana Depression
+          </h2>
+          <div class="project-description">
+            <p>
+              Turkana Depression shows widespread diffuse faulting and
+              volcanism, in contrast to the narrow rift architecture in the
+              Ethiopian Plateau. It also experienced two episodes of rifting
+              prior to flood-basalt magmatism, likely thinning and weakening the
+              lithosphere. Here, we propose that the lithospheric strength has a strong control on melt extraction and this can
+              explain the anomalous rift architecture in the Turkana Depression,
+              East African Rift. This work represents one of the first
+              physically-consistent rift models with magma transport.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://agupubs.onlinelibrary.wiley.com/doi/10.1029/2025GL115228"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok et al. (GRL, 2025)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://github.com/apusok/FD-PDE/tree/main/models/morfault"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github code: morfault<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Melt extraction in the Turkana Depression"
+              data-project-title="Melt extraction in the Turkana Depression"
+              ><img
+                src="/assets/img/turkana.png"
+                alt="OceanMelt"
+                width="2056"
+                height="874"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure><figure class="project-film">
+            <ResearchVideo
+              videoId="nljzT88Yngg"
+              title="Melt extraction in the Turkana Depression"
+              poster="/assets/img/research-nljzT88Yngg-poster.jpg"
+            />
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="making-the-ocean-floor"
+        aria-labelledby="making-the-ocean-floor-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Project</div>
+          <h2 id="making-the-ocean-floor-title">
+            RS URF Project: Making the Ocean Floor
+          </h2>
+          <div class="project-description">
+            <p>
+              The project aims to understand the interaction between magmatism
+              and tectonics in oceanic settings. Motivated by the most recent
+              observations from the ocean floor, we plan to develop
+              physics-based models that capture the details of magma generation
+              in the mantle and how it travels to the surface to create and
+              shape the seafloor. Funding awarded by the Royal Society between 2024-2031.
+            </p>
+          </div>
+          <div class="project-links"></div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: RS URF Project: Making the Ocean Floor"
+              data-project-title="RS URF Project: Making the Ocean Floor"
+              ><img
+                src="/assets/img/RSurf_overview.png"
+                alt="OceanMelt"
+                width="5317"
+                height="3068"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="convective-flow-lab"
+        aria-labelledby="convective-flow-lab-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Model</div>
+          <h2 id="convective-flow-lab-title">Convective flow at the LAB</h2>
+          <div class="project-description">
+            <p>
+              A classic problem in geophysics, what is the nature of the
+              lithosphere-asthenosphere boundary (LAB)? The LAB is the boundary
+              between tectonic plates and the convecting mantle below, but also
+              marks a transition between heat transport by conduction in the
+              lithosphere and by convection in the asthenosphere. Multiple
+              geophysical observations suggest a weaker and shallower LAB. Small
+              melt fractions enriched in volatiles (water, carbon dioxide) may
+              explain these geophysical observations and the geochemistry of
+              intraplate volcanoes. Right: two-phase flow models show how
+              volatile-assisted melting impacts convective flow in the
+              asthenosphere.
+            </p>
+          </div>
+          <div class="project-links"></div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Convective flow at the LAB"
+              data-project-title="Convective flow at the LAB"
+              ><img
+                src="/assets/img/LABconvect.png"
+                alt="OceanMelt"
+                width="1014"
+                height="948"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="buoyancy-driven-flow"
+        aria-labelledby="buoyancy-driven-flow-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article/Model</div>
+          <h2 id="buoyancy-driven-flow-title">
+            Buoyancy-driven flow at mid-ocean ridges
+          </h2>
+          <div class="project-description">
+            <p>
+              Mid-ocean ridge are tectonic plate boundaries where most of magmatism on Earth occurs. 
+              In the classical view, the partially molten region extends symmetrically beneath the ridge axis. Observations, instead, show significant degree of asymmetry at various mid-ocean ridges.
+              Here, we developed a mid-ocean ridge model to investigate buoyancy-driven flow due to
+              porosity, composition, and temperature. Right: simulation showing
+              development of asymmetry beneath the ridge axis and small-scale
+              convection at the lithosphere-asthenosphere boundary. Top panel
+              represents melt fraction (porosity); bottom panel represents bulk
+              density relative to reference solid mantle.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://academic.oup.com/gji/advance-article/doi/10.1093/gji/ggac309/6671556"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok et al. (GJI, 2022)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://github.com/apusok/FD-PDE/tree/main/models/mbuoy3"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github code: mbuoy3<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-film">
+            <ResearchVideo
+              videoId="hoBybmiXkzs"
+              title="Buoyancy-driven flow at mid-ocean ridges"
+              poster="/assets/img/research-hoBybmiXkzs-poster.jpg"
+            /><figcaption>Source: Adina Pusok. © Foalab.</figcaption>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="rift-o-mat"
+        aria-labelledby="rift-o-mat-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Project</div>
+          <h2 id="rift-o-mat-title">
+            RIFT-O-MAT Project: Magma dynamics at mid-ocean ridges and rifts
+          </h2>
+          <div class="project-description">
+            <p>
+              How does magmatism promote and shape rifts in continental and
+              oceanic lithosphere? In this project (PI Richard Katz, U. Oxford),
+              we focused on magma generation and transport at spreading ridges,
+              but also on deformation of the host rock to investigate processes
+              such as diking and faulting. We also developed numerical tools
+              (FD-PDE framework) that are suitable for magma dynamics theory
+              with visco-elasto-plastic rheology. (2019-2024)
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="http://foalab.earth.ox.ac.uk"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Foalab website<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://github.com/apusok/FD-PDE"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Github code: FD-PDE framework<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://academic.oup.com/gji/article/234/3/2007/7136153?login=false"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Li et al. (GJI, 2023)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://egusphere.copernicus.org/preprints/2024/egusphere-2024-3504/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Li et al. (GMD, 2025)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-film">
+            <ResearchVideo
+              videoId="rFhb6mFEZNg"
+              title="RIFT-O-MAT Project: Magma dynamics at mid-ocean ridges and rifts"
+              poster="/assets/img/research-rFhb6mFEZNg-poster.jpg"
+            /><figcaption>
+              Overview of poro-viscoelasto-viscoplastic flow theory. Source:
+              Yuan Li. © Foalab.
+            </figcaption>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="101-geodynamics"
+        aria-labelledby="101-geodynamics-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article</div>
+          <h2 id="101-geodynamics-title">Guide to 101 Geodynamics</h2>
+          <div class="project-description">
+            <p>
+              During the COVID pandemic, we (the authors) transformed a short
+              EGU course into this collaborative perspectives paper on methods,
+              practices, and philosophy of geodynamic modelling. The paper aims
+              to be an introduction to geodynamic modelling for students and
+              non-geodynamicists, but also invites feedback from a more expert
+              audience.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://se.copernicus.org/preprints/se-2021-14/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >van Zelst et al. (Solid Earth, 2022)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Guide to 101 Geodynamics"
+              data-project-title="Guide to 101 Geodynamics"
+              ><img
+                src="/assets/img/ModellingFlow.png"
+                alt="101gd"
+                width="1461"
+                height="1291"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="sediments-convergent-margins"
+        aria-labelledby="sediments-convergent-margins-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article</div>
+          <h2 id="sediments-convergent-margins-title">
+            Sediments and style of convergent margins
+          </h2>
+          <div class="project-description">
+            <p>
+              Subduction zones represent the only major pathway by which
+              continental material (sediments) can be returned to the Earth's
+              mantle. When sediments are considered, convergent margins appear
+              to fall into one of two classes: accretionary and erosive. In this
+              study, we run 2-D subduction simulations to investigate how
+              sediment fluxes influence subduction dynamics and plate coupling.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://se.copernicus.org/articles/13/1455/2022/se-13-1455-2022.html"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok et al. (Solid Earth, 2022)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Sediments and style of convergent margins"
+              data-project-title="Sediments and style of convergent margins"
+              ><img
+                src="/assets/img/MSubdSed-results01-03-04_03.jpg"
+                alt="101gd"
+                width="3736"
+                height="2443"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="india-asia-double-subduction"
+        aria-labelledby="india-asia-double-subduction-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article</div>
+          <h2 id="india-asia-double-subduction-title">
+            India-Asia convergence history and double subduction
+          </h2>
+          <div class="project-description">
+            <p>
+              Same-dip double subduction is a special tectonic configuration,
+              where two slabs dip in the same direction. Examples exist for the
+              India-Asia and the present day Ryukyu-Izu-Bonin-Mariana (Pacific,
+              Philippines Sea Plates) settings. We run 2-D and 3-D models to
+              investigate the formation and stability of double subduction, and
+              we propose a new sequence of events for the India-Asia convergence
+              history.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://agupubs.onlinelibrary.wiley.com/doi/abs/10.1029/2018JB017027"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok and Stegman (JGR, 2019)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://advances.sciencemag.org/content/6/19/eaaz8681"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok and Stegman (Sci. Adv., 2020)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: India-Asia convergence history and double subduction"
+              data-project-title="India-Asia convergence history and double subduction"
+              ><img
+                src="/assets/img/Mdouble.png"
+                alt="101gd"
+                width="1450"
+                height="1180"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="continental-collision-topography"
+        aria-labelledby="continental-collision-topography-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article</div>
+          <h2 id="continental-collision-topography-title">
+            Topography in 3-D continental collision models
+          </h2>
+          <div class="project-description">
+            <p>
+              The Himalayas, the Tibetan Plateau, or the Andes are remarkable
+              features on the surface of the Earth. However, it is unclear how
+              they formed or why they are so high. In this project, we ran lots
+              of 3-D simulations of subduction/collision to understand how high
+              topography (&gt;5km) is formed. And it turns out it's not so easy
+              to build topography in numerical models. However, we do provide
+              semi-analytical insights on the conditions necessary for building
+              high mountains and plateaus.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://onlinelibrary.wiley.com/doi/full/10.1002/2015GC005732"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok and Kaus (G-cubed, 2015)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Topography in 3-D continental collision models"
+              data-project-title="Topography in 3-D continental collision models"
+              ><img
+                src="/assets/img/MTopo.png"
+                alt="101gd"
+                width="984"
+                height="1048"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="rheological-approximations"
+        aria-labelledby="rheological-approximations-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Article</div>
+          <h2 id="rheological-approximations-title">
+            Rheological approximations in 3-D subduction-collision models
+          </h2>
+          <div class="project-description">
+            <p>
+              Rocks deform in a visco-elasto-plastic manner, which is difficult
+              to solve numerically (nonlinear system) and the coefficients are
+              poorly constrained from observations and laboratory experiments.
+              So, previous numerical studies used various approximations for
+              rock rheology. In this study, we investigate the effect of such
+              rheological approximations in a 3-D subduction/collision model.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://www.sciencedirect.com/science/article/pii/S0040195118301604"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok et al. (Tectonophys., 2018)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Rheological approximations in 3-D subduction-collision models"
+              data-project-title="Rheological approximations in 3-D subduction-collision models"
+              ><img
+                src="/assets/img/abstract-strain_rate.jpg"
+                alt="101gd"
+                width="3220"
+                height="2289"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+      <article
+        class="project-entry"
+        id="numerical-methods"
+        aria-labelledby="numerical-methods-title"
+      >
+        <div class="project-copy">
+          <div class="project-number" aria-hidden="true">Methods</div>
+          <h2 id="numerical-methods-title">
+            Numerical methods for computational geodynamics
+          </h2>
+          <div class="project-description">
+            <p>
+              Part of our research involves developing the numerical techniques
+              employed. By knowing and mastering the tools we are using, our work
+              can achieve far better quality, a principle we try to follow and
+              instill in others. Topics: numerical methods for single/two-phase
+              flow theory, finite difference discretisation scheme, non-linear
+              solvers for complex rheology.
+            </p>
+          </div>
+          <div class="project-links">
+            <a
+              class="project-link"
+              href="https://link.springer.com/article/10.1007/s00024-016-1431-8"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Pusok et al. (PAAG, 2017)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://www.blogs.uni-mainz.de/fb09-geosciences/files/2018/12/Kaus_etal_NIC.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              >LaMEM - Kaus et al. (2016)<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a
+            >
+            <a
+              class="project-link"
+              href="https://bitbucket.org/bkaus/lamem/src/master/"
+              target="_blank"
+              rel="noopener noreferrer"
+              >Bitbucket: LaMEM<svg
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="1.6"
+                aria-hidden="true"><path d="M5 12h14m-6-6 6 6-6 6"></path></svg
+              ></a>
+          </div>
+        </div>
+        <div class="project-media">
+          <figure class="project-figure">
+            <button
+              class="figure-enlarge"
+              type="button"
+              aria-label="Enlarge figure: Numerical methods for computational geodynamics"
+              data-project-title="Numerical methods for computational geodynamics"
+              ><img
+                src="/assets/img/MMethods.jpg"
+                alt="101gd"
+                width="2193"
+                height="1010"
+                loading="lazy"
+              /><span class="figure-tool" aria-hidden="true"
+                >Enlarge figure <svg
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.6"
+                  aria-hidden="true"
+                  ><path d="M14 4h6v6M20 4l-7 7M10 20H4v-6M4 20l7-7"
+                  ></path></svg
+                ></span
+              ></button>
+          </figure>
+        </div>
+      </article>
+    </div>
+    <div class="research-actions">
+      <a class="return-home" href="/"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"></path></svg
+        >Return Home</a
+      >
+      <a class="back-top" href="#research-top">Back to top ↑</a>
+    </div>
+  </div>
+  <dialog class="figure-dialog" aria-labelledby="figure-dialog-title">
+    <div class="figure-dialog__head">
+      <h2 id="figure-dialog-title">Research figure</h2><button
+        class="figure-dialog__close"
+        type="button"
+        autofocus="">Close ×</button>
+    </div><img class="figure-dialog__image" alt="" />
+  </dialog>
 </Layout>
+
+<script>
+  const dialog = document.querySelector(".figure-dialog");
+  const dialogImage = dialog.querySelector("img");
+  const dialogTitle = dialog.querySelector("h2");
+  document.querySelectorAll(".figure-enlarge").forEach((button) => {
+    button.addEventListener("click", () => {
+      const image = button.querySelector("img");
+      dialogImage.src = image.src;
+      dialogImage.alt = image.alt;
+      dialogTitle.textContent = button.dataset.projectTitle;
+      dialog.showModal();
+    });
+  });
+  dialog
+    .querySelector("button")
+    .addEventListener("click", () => dialog.close());
+  dialog.addEventListener("click", (event) => {
+    if (event.target !== dialog) return;
+    const bounds = dialog.getBoundingClientRect();
+    if (
+      event.clientX < bounds.left ||
+      event.clientX > bounds.right ||
+      event.clientY < bounds.top ||
+      event.clientY > bounds.bottom
+    )
+      dialog.close();
+  });
+  dialog.addEventListener("close", () => {
+    dialogImage.removeAttribute("src");
+  });
+</script>

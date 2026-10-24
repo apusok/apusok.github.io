@@ -6,3 +6,4 @@ _site
 .bin
 .vite
 node_modules
+dist/

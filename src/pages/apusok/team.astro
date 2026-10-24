@@ -1,136 +1,215 @@
 ---
-import { 
-	Container, 
-	Button,
-  TextCardSection,
-	YouTubeEmbedSection, 
-  TextSection } from '@components/odyssey-theme';
-import Layout from '../../layouts/Page.astro';
-import HeroSection from '../../components/sections/heros/HeroSection.astro';
-import TeamMember from '../../components/sections/heros/TeamMember.astro';
+import Layout from "../../layouts/Home.astro";
+import "../../styles/team.css";
 
 const seo = {
-  title: `Team | A Pusok`,
-  description: `Team`,
+  title: "Team | A Pusok",
+  description: "Team",
 };
 ---
 
-<Layout seo={seo}>
-  <Container>
-		<TextCardSection>
-			<h1 style="color: var(--theme-on-surface-1);">Research Team</h1> 
-			<!-- <h3 class="h_theme">Current Members</h3> -->
-
-			<TeamMember reversed>
-				<div slot="text-container">
-					<h3 class="h_theme">Adina Pusok</h3>
-						<ul class="h_theme">
-							<li>Royal Society University Research Fellow</li>
-							<li><a target="_blank" href="/apusok/about">Bio</a>, <a target="_blank" href="https://www.earth.ox.ac.uk/people/adina-pusok">Departmental homepage</a></li>
-						</ul>
-					<h4 class="h_theme">
-						Email: <a class="a_theme" href="mailto:adina.pusok@earth.ox.ac.uk" rel="nofollow">adina.pusok@earth.ox.ac.uk</a>
-					</h4>
-				</div>
-				<picture slot="image-container">
-					<img 
-						src="../../../assets/img/profile2020.jpg"
-						alt="author"
-						id="home-hero-image"
-					/>
-				</picture>
-			</TeamMember>
-
-			<TeamMember reversed>
-				<div slot="text-container">
-					<h3 class="h_theme">Marko Repac</h3>
-						<ul class="h_theme">
-							<li>Postdoctoral Research Associate </li>
-							<li>Melt extraction across the lithosphere</li>
-							<li><a target="_blank" href="https://www.earth.ox.ac.uk/people/marko-repac">Departmental homepage</a></li>
-						</ul>
-				</div>
-				<picture slot="image-container">
-					<img 
-						src="../../../assets/img/marko_repac.jpeg"
-						alt="OceanMelt"
-						id="home-hero-image"
-					/>
-				</picture>
-			</TeamMember>
-
-			<TeamMember reversed>
-				<div slot="text-container">
-					<h3 class="h_theme">Yangfan Huang</h3>
-						<ul class="h_theme">
-							<li>D.Phil. student (co-supervised by Prof. Richard Walker)</li>
-							<li>Formation of conjugate strike-slip fault systems</li>
-							<li><a target="_blank" href="https://www.earth.ox.ac.uk/people/yangfan-huang">Departmental homepage</a></li>
-						</ul>
-				</div>
-				<picture slot="image-container">
-					<img 
-						src="../../../assets/img/Yangfan_huang.JPG"
-						alt="OceanMelt"
-						id="home-hero-image"
-					/>
-				</picture>
-			</TeamMember>
-
-			<TeamMember reversed>
-				<div slot="text-container">
-					<h3 class="h_theme">Christine Moutell</h3>
-						<ul class="h_theme">
-							<li>MSc. student 2025-2026 (co-supervised by Prof. Richard Katz)</li>
-							<li>The Mathematician Ridge: the ridge that stopped spreading </li>
-							<!-- <li><a target="_blank" href="https://www.earth.ox.ac.uk/people/yangfan-huang">Departmental homepage</a></li> -->
-						</ul>
-				</div>
-				<picture slot="image-container">
-					<img 
-						src="../../../assets/img/dandelion-seed.jpeg"
-						alt="OceanMelt"
-						id="home-hero-image"
-					/>
-				</picture>
-			</TeamMember>
-
-				<TeamMember reversed>
-				<div slot="text-container">
-					<h3 class="h_theme">Isabel Honeyman</h3>
-						<ul class="h_theme">
-							<li>Summer internship student (June-Aug 2026) </li>
-							<!-- <li> </li> -->
-							<!-- <li><a target="_blank" href="https://www.earth.ox.ac.uk/people/yangfan-huang">Departmental homepage</a></li> -->
-						</ul>
-				</div>
-				<picture slot="image-container">
-					<img 
-						src="../../../assets/img/dandelion-seed.jpeg"
-						alt="OceanMelt"
-						id="home-hero-image"
-					/>
-				</picture>
-			</TeamMember>
-
-			<!-- <h3 class="h_theme">D.Phil. Research Students</h3> -->
-			<h3 class="h_theme">Past Members</h3>
-			<p class="h_theme">Co-supervision with Prof. Richard Katz (U. Oxford) whilst a postdoc</p>
-			<ul class="h_theme">
-				<li><b>Danqing Luo</b>: MSc. student (2023-2024), now PhD student at U. Reading, UK</li>
-				<li><b>Josh Fallows</b>: MSc. student (2023-2024)</li>
-				<li><b>Suyue Li</b>: Intern student (Summer 2022)</li>
-				<li><b>Katherine Dale</b>: MSc. student (2021-2022), now PhD student at U. Cote d'Azur, France</li>
-			</ul>
-
-			<p class="h_theme">Co-supervision with Prof. Dave Stegman (SIO/UCSD) whilst a postdoc</p>
-			<ul class="h_theme">
-				<li><b>Madeleine Kerr</b>: Intern student (Summer 2018), now PhD student at SIO/UCSD</li>
-			</ul>
-
-			<div class="cta-buttons__container">
-				<Button href="/">Return Home</Button>
-			</div>
-		</TextCardSection>
-	</Container>
+<Layout {seo} pageClass="team-page">
+  <div class="team-wrap" id="team-top">
+    <div class="team-heading">
+      <h1 id="team-title">Research <em>Team</em></h1>
+      <a
+        class="section-jump"
+        href="#past-members"
+        aria-label="Jump to Past Members"
+        >Past Members <svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"><path d="M12 4v16m-6-6 6 6 6-6"></path></svg
+        ></a
+      >
+    </div>
+    <section class="current-members" aria-labelledby="team-title">
+      <article class="member-card member-card--lead" aria-labelledby="member-1">
+        <figure class="member-photo">
+          <img src="/assets/img/profile2020.jpg" alt="Adina Pusok" />
+        </figure>
+        <div class="member-content">
+          <h2 class="member-name" id="member-1">Adina Pusok</h2>
+          <ul class="member-details">
+            <li>Royal Society University Research Fellow</li>
+            <li>
+              <a target="_blank" href="/apusok/about">Bio</a>, <a
+                target="_blank"
+                href="https://www.earth.ox.ac.uk/people/adina-pusok"
+                >Departmental homepage</a>
+            </li>
+          </ul>
+          <p class="member-contact">
+            Email: <a
+              class="a_theme"
+              href="mailto:adina.pusok@earth.ox.ac.uk"
+              rel="nofollow">adina.pusok@earth.ox.ac.uk</a>
+          </p>
+        </div>
+      </article>
+      <div class="member-grid">
+        <article class="member-card" aria-labelledby="member-2">
+          <figure class="member-photo">
+            <img src="/assets/img/marko_repac.jpeg" alt="Marko Repac" />
+          </figure>
+          <div class="member-content">
+            <h2 class="member-name" id="member-2">Marko Repac</h2>
+            <ul class="member-details">
+              <li>Postdoctoral Research Associate</li>
+              <li>Petit-spot magmatism: Melt extraction across the lithosphere</li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.earth.ox.ac.uk/people/marko-repac"
+                  >Departmental homepage</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="member-card" aria-labelledby="member-3">
+          <figure class="member-photo">
+            <img src="/assets/img/Yangfan_huang.JPG" alt="Yangfan Huang" />
+          </figure>
+          <div class="member-content">
+            <h2 class="member-name" id="member-3">Yangfan Huang</h2>
+            <ul class="member-details">
+              <li>D.Phil. student (co-supervised by Prof. Richard Walker)</li>
+              <li>Formation and dynamics of conjugate strike-slip fault systems</li>
+              <li>
+                <a
+                  target="_blank"
+                  href="https://www.earth.ox.ac.uk/people/yangfan-huang"
+                  >Departmental homepage</a>
+              </li>
+            </ul>
+          </div>
+        </article>
+        <article class="member-card" aria-labelledby="member-4">
+          <figure class="member-photo">
+            <img src="/assets/img/dandelion-seed.jpeg" alt="Amrithaa Velayutham"
+            />
+          </figure>
+          <div class="member-content">
+            <h2 class="member-name" id="member-4">Amrithaa Velayutham</h2>
+            <ul class="member-details">
+              <li>
+                MSc. student 2026-2027 (co-supervised by Prof. Richard Katz)
+              </li>
+              <li>Oceanic crustal production modulated by variations in seafloor spreading</li>
+              <!-- <li><a target="_blank" href="https://www.earth.ox.ac.uk/people/yangfan-huang">Departmental homepage</a></li> -->
+            </ul>
+          </div>
+        </article>
+        <!-- <article class="member-card" aria-labelledby="member-5">
+          <figure class="member-photo">
+            <img src="/assets/img/dandelion-seed.jpeg" alt="Isabel Honeyman" />
+          </figure>
+          <div class="member-content">
+            <h2 class="member-name" id="member-5">Isabel Honeyman</h2>
+            <ul class="member-details">
+              <li>Summer internship student (June-Aug 2026)</li>
+            </ul>
+          </div>
+        </article> -->
+      </div>
+    </section>
+    <section
+      class="past-members"
+      id="past-members"
+      aria-labelledby="past-title"
+    >
+      <h2 class="past-title" id="past-title">Past Members</h2>
+      <div class="alumni-group">
+        <table class="alumni-table">
+          <tbody>
+            <tr>
+              <th scope="row">Isabel Honeyman</th>
+              <td
+                ><div class="alumni-detail">
+                  Intern student (Summer 2026), now MSc student at U. Oxford, UK
+                </div></td
+              >
+            </tr>
+            <tr>
+              <th scope="row">Christine Moutell</th>
+              <td
+                ><div class="alumni-detail">
+                  MSc. student (2025-2026, co-supervised by Prof. Richard Katz), now teacher training at KCL, UK
+                </div></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alumni-group">
+        <table class="alumni-table">
+          <caption
+            >Co-supervision with Prof. Richard Katz (U. Oxford) whilst a postdoc</caption
+          >
+          <tbody>
+            <tr>
+              <th scope="row">Danqing Luo</th>
+              <td
+                ><div class="alumni-detail">
+                  MSc. student (2023-2024), now PhD student at U. Reading, UK
+                </div></td
+              >
+            </tr>
+            <tr>
+              <th scope="row">Josh Fallows</th>
+              <td><div class="alumni-detail">MSc. student (2023-2024), in industry job</div></td>
+            </tr>
+            <tr>
+              <th scope="row">Suyue Li</th>
+              <td
+                ><div class="alumni-detail">
+                  Intern student (Summer 2022), now PhD student at Texas A&M University
+                </div></td
+              >
+            </tr>
+            <tr>
+              <th scope="row">Katherine Dale</th>
+              <td
+                ><div class="alumni-detail">
+                  MSc. student (2021-2022), now PhD student at U. Cote d'Azur,
+                  France
+                </div></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+      <div class="alumni-group">
+        <table class="alumni-table">
+          <caption
+            >Co-supervision with Prof. Dave Stegman (SIO/UCSD) whilst a postdoc</caption
+          >
+          <tbody>
+            <tr>
+              <th scope="row">Madeleine Kerr</th>
+              <td
+                ><div class="alumni-detail">
+                  Intern student (Summer 2018), now Postdoc at UCLA.
+                </div></td
+              >
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+    <div class="team-actions">
+      <a class="return-home" href="/"
+        ><svg
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.6"
+          aria-hidden="true"><path d="M19 12H5m6-6-6 6 6 6"></path></svg
+        >Return Home</a
+      >
+      <a class="back-top" href="#team-top">Back to top ↑</a>
+    </div>
+  </div>
 </Layout>

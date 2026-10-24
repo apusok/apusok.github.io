@@ -23,13 +23,13 @@ const { seo } = Astro.props as Props;
 		</span>
 		<Button slot="action-item" href="https://seafloor-explorer.github.io" newTab>Seafloor Explorer Seminars</Button>
 	</Header>
-	<div id="page">
+	<div id="page" data-page={Astro.url.pathname.split('/').filter(Boolean).pop() || 'home'}>
 		<slot />
 	</div>
 	<Footer
 		slot="footer"
-		background="var(--theme-surface-1)"
-		color="var(--theme-on-surface-1)"
+		background="var(--theme-footer-bg)"
+		color="var(--theme-footer-color)"
 		footerLists={footerLists}
     footerSocials={footerSocials}
 		copyrightName={settings.name}

@@ -1,0 +1,186 @@
+/* Publications page: approved sage section boxes, headings above, compact citations, and no entry separators. */
+.publications-page {
+  font: 18px/1.7 Arial, Helvetica, sans-serif;
+  color: var(--theme-on-bg);
+  overflow-wrap: break-word;
+}
+.publications-page .publications-wrap {
+  width: min(1360px, calc(100% - 80px));
+  margin-inline: auto;
+}
+.publications-page h1,
+.publications-page h2 {
+  font-family: Georgia, "Times New Roman", serif;
+  font-weight: 400;
+  color: var(--theme-on-bg);
+}
+.publications-page .publications-heading {
+  padding: 36px 0 27px;
+}
+.publications-page h1 {
+  margin: 0 0 18px;
+  font-size: clamp(40px, 4.3vw, 64px);
+  line-height: 1.07;
+  letter-spacing: -0.047em;
+}
+.publications-page .scholar-intro {
+  margin: 0;
+  color: var(--theme-muted);
+}
+.publications-page a {
+  color: var(--theme-teal);
+  text-decoration-color: var(--theme-link-underline);
+  text-underline-offset: 4px;
+}
+.publications-page a:hover {
+  text-decoration-color: currentColor;
+}
+.publications-page .publication-group {
+  display: block;
+  margin-bottom: 22px;
+  padding: 20px 23px;
+  scroll-margin-top: 24px;
+  background: var(--theme-surface-1);
+  border-radius: 3px;
+}
+.publications-page .publication-category {
+  position: static;
+  margin: 0 0 14px;
+  padding-left: 15px;
+  border-left: 2px solid var(--theme-peach);
+  font-size: 35px;
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+.publications-page .citation-list {
+  min-width: 0;
+  margin: 0;
+  padding: 0 0 0 25px;
+  color: var(--theme-muted);
+  font-size: 18px;
+  line-height: 1.65;
+}
+.publications-page ul.citation-list {
+  padding-left: 19px;
+}
+.publications-page .citation-list > li {
+  margin: 0;
+  padding: 0 0 0 5px;
+  border: 0;
+  background: transparent;
+}
+.publications-page .citation-list > li + li {
+  margin-top: 14px;
+}
+.publications-page .citation-list > li::marker {
+  color: var(--theme-teal);
+  font-size: 15px;
+  font-variant-numeric: tabular-nums;
+}
+.publications-page ul.citation-list > li::marker {
+  font-size: 11px;
+}
+.publications-page .citation-list strong {
+  color: var(--theme-on-bg);
+  font-weight: 700;
+}
+.publications-page .citation-list a {
+  font-size: 17px;
+  white-space: nowrap;
+}
+.publications-page .publications-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 22px;
+  padding: 0 0 36px;
+}
+.publications-page .return-home {
+  display: inline-flex;
+  align-items: center;
+  gap: 16px;
+  padding: 13px 19px;
+  border-radius: 3px;
+  background: var(--theme-primary);
+  color: #fff;
+  font-size: 17px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.publications-page .return-home:hover {
+  background: var(--theme-teal);
+}
+.publications-page .return-home svg {
+  width: 18px;
+  height: 18px;
+}
+.publications-page .back-top {
+  font-size: 17px;
+  text-decoration: none;
+}
+@media (max-width: 1150px) {
+  .publications-page .publications-wrap {
+    width: calc(100% - 56px);
+  }
+  .publications-page h1 {
+    font-size: clamp(39px, 4.7vw, 54px);
+  }
+}
+@media (max-width: 900px) {
+  .publications-page h1 {
+    font-size: clamp(42px, 7vw, 62px);
+  }
+  .publications-page .publication-category {
+    position: static;
+  }
+}
+@media (max-width: 600px) {
+  .publications-page {
+    font-size: 17px;
+  }
+  .publications-page .publications-wrap {
+    width: calc(100% - 36px);
+  }
+  .publications-page .publications-heading {
+    padding: 28px 0 24px;
+  }
+  .publications-page h1 {
+    font-size: clamp(37px, 8.5vw, 49px);
+    margin-bottom: 16px;
+  }
+  .publications-page .publication-group {
+    margin-bottom: 19px;
+    padding: 19px 16px;
+  }
+  .publications-page .publication-category {
+    font-size: 31px;
+    padding-left: 12px;
+  }
+  .publications-page .citation-list {
+    font-size: 17px;
+    padding-left: 23px;
+  }
+  .publications-page ul.citation-list {
+    padding-left: 17px;
+  }
+  .publications-page .citation-list > li {
+    padding-left: 2px;
+  }
+  .publications-page .citation-list > li + li {
+    margin-top: 13px;
+  }
+  .publications-page .citation-list a {
+    font-size: 16px;
+  }
+  .publications-page .publications-actions {
+    padding-bottom: 30px;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .publications-page *,
+  .publications-page *::before,
+  .publications-page *::after {
+    transition: none;
+  }
+}
