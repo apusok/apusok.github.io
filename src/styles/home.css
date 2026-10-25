@@ -1,7 +1,7 @@
 /* Approved homepage layout with Deep Slate & Mist colours and warm orange accents. */
 .home-page {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   overflow-wrap: break-word;
 }
 .home-page a {
@@ -26,10 +26,10 @@
   display: flex;
   align-items: center;
   gap: 10px;
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 0.12em;
-  line-height: 1.6;
+  line-height: var(--line-height-body);
   text-transform: uppercase;
   color: var(--theme-teal);
 }
@@ -41,7 +41,8 @@
   background: var(--theme-peach);
 }
 .home-page h1 {
-  font: normal clamp(40px, 4.3vw, 64px) / 1.07 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-xxl) / var(--line-height-title)
+    var(--theme-font-family-serif);
   letter-spacing: -0.047em;
   margin: 18px 0 24px;
 }
@@ -62,8 +63,8 @@
 .home-page .desc {
   margin: 0;
   color: var(--theme-muted);
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
 }
 .home-page .desc a {
   color: var(--theme-teal);
@@ -122,7 +123,7 @@
   padding: 16px 22px;
   border-top: 1px solid var(--theme-line);
   background: var(--theme-bg);
-  font: normal 24px/1.25 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-md) / 1.25 var(--theme-font-family-serif);
   letter-spacing: -0.02em;
 }
 .home-page .projects {
@@ -137,7 +138,8 @@
   margin-bottom: 22px;
 }
 .home-page h2 {
-  font: normal 42px/1.15 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-xl) / var(--line-height-heading)
+    var(--theme-font-family-serif);
   letter-spacing: -0.04em;
   margin: 0;
 }
@@ -185,20 +187,21 @@
   align-items: center;
   gap: 12px;
   color: var(--theme-link);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   letter-spacing: 0.15em;
-  line-height: 1.5;
+  line-height: var(--line-height-body);
 }
 .home-page .card h3 {
-  font: normal 35px/1.15 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-lg) / var(--line-height-heading)
+    var(--theme-font-family-serif);
   letter-spacing: -0.03em;
   margin: 51px 0 12px;
 }
 .home-page .card p {
   margin: 0;
   color: var(--theme-muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   max-width: 95%;
 }
 .home-page .card .go {
@@ -221,15 +224,15 @@
 .home-page .news-intro p {
   margin: 16px 0 0;
   color: var(--theme-muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   max-width: 240px;
 }
 .home-page .placeholder-note {
   display: inline-block;
   margin-top: 18px;
   color: var(--theme-teal);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 600;
   letter-spacing: 0.06em;
   text-transform: uppercase;
@@ -254,21 +257,21 @@
 .home-page .news-category {
   padding-top: 5px;
   color: var(--theme-teal);
-  font-size: 12px;
+  font-size: var(--font-size-xs);
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
 }
 .home-page .news-item h3 {
   margin: 0 0 6px;
-  font: normal 25px/1.25 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-md) / 1.25 var(--theme-font-family-serif);
   letter-spacing: -0.02em;
 }
 .home-page .news-item p {
   margin: 0;
   color: var(--theme-muted);
-  font-size: 17px;
-  line-height: 1.6;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
 }
 @media (max-width: 1150px) {
   .home-page .home-wrap {
@@ -278,18 +281,12 @@
     grid-template-columns: minmax(0, 1fr) minmax(0, 1.25fr);
     gap: 28px;
   }
-  .home-page h1 {
-    font-size: clamp(39px, 4.7vw, 54px);
-  }
 }
 @media (max-width: 900px) {
   .home-page .hero {
     grid-template-columns: 1fr;
     padding-top: 30px;
     gap: 28px;
-  }
-  .home-page h1 {
-    font-size: clamp(42px, 7vw, 62px);
   }
   .home-page h1 br:first-of-type {
     display: none;
@@ -326,7 +323,6 @@
     width: calc(100% - 36px);
   }
   .home-page .eyebrow {
-    font-size: 11px;
     letter-spacing: 0.08em;
     gap: 8px;
   }
@@ -334,15 +330,10 @@
     width: 20px;
   }
   .home-page h1 {
-    font-size: clamp(37px, 8.5vw, 49px);
     margin-top: 16px;
   }
   .home-page h1 br:first-of-type {
     display: initial;
-  }
-  .home-page .desc {
-    font-size: 17px;
-    line-height: 1.7;
   }
   .home-page .portrait {
     width: 68px;
@@ -353,14 +344,10 @@
   }
   .home-page .simulation figcaption {
     padding: 14px 16px;
-    font-size: 21px;
   }
   .home-page .video-play {
     width: 56px;
     height: 56px;
-  }
-  .home-page h2 {
-    font-size: 36px;
   }
   .home-page .cards {
     grid-template-columns: 1fr;
@@ -373,21 +360,12 @@
   .home-page .card h3 {
     margin-top: 42px;
   }
-  .home-page .cardtop {
-    font-size: 11px;
-  }
-  .home-page .card p {
-    font-size: 17px;
-  }
   .home-page .news-item {
     grid-template-columns: 1fr;
     gap: 7px;
   }
   .home-page .news-category {
     padding-top: 0;
-  }
-  .home-page .news-item h3 {
-    font-size: 24px;
   }
   .home-page .news {
     padding-bottom: 32px;

@@ -136,7 +136,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     position: relative;
     padding: 0.75rem 0;
     text-decoration: none;
-    font-size: 0.8125rem;
+    font-size: var(--font-size-nav);
     font-weight: 600;
     color: inherit;
   }
@@ -159,7 +159,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     background: transparent;
     color: var(--theme-teal);
     padding: 0.7rem 1rem;
-    font-size: 0.75rem;
+    font-size: var(--font-size-sm);
     white-space: nowrap;
   }
   .header-action-item__container :global(.btn:hover) {
@@ -204,7 +204,6 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     }
     nav a {
       padding: 0.6rem 0;
-      font-size: 1rem;
     }
     .header-action-item__container {
       padding-top: 1rem;

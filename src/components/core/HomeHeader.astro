@@ -48,8 +48,8 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       width: min(1360px, calc(100% - 80px));
       margin-inline: auto;
       font-family: var(--theme-font-family-sans);
-      font-size: 18px;
-      line-height: 1.7;
+      font-size: var(--font-size-base);
+      line-height: var(--line-height-body);
       min-height: 88px;
       display: flex;
       align-items: center;
@@ -59,8 +59,8 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     }
     .brand { display: flex; align-items: center; gap: 12px; flex-shrink: 0; }
     .brand img { width: 44px; height: 44px; object-fit: contain; }
-    .name { font-size: 18px; font-weight: 700; letter-spacing: .015em; white-space: nowrap; }
-    .nav { display: flex; align-items: center; gap: 26px; font-size: 17px; font-weight: 600; }
+    .name { font-size: var(--font-size-brand); font-weight: 700; letter-spacing: .015em; white-space: nowrap; }
+    .nav { display: flex; align-items: center; gap: 26px; font-size: var(--font-size-nav); font-weight: 600; }
     .nav a { padding-block: 16px; }
     .nav a[aria-current='page'] {
       color: var(--theme-teal);
@@ -79,9 +79,9 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       border-radius: 999px;
       padding: 11px 17px;
       color: var(--theme-teal);
-      font-size: 14px;
+      font-size: var(--font-size-sm);
       font-weight: 700;
-      line-height: 1.5;
+      line-height: var(--line-height-body);
     }
     .pill:hover { background: var(--theme-teal); color: #fff; }
     .pill svg { width: 18px; height: 18px; flex-shrink: 0; }
@@ -93,7 +93,7 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
       padding: 8px 13px;
       border: 1px solid var(--theme-line);
       border-radius: 3px;
-      font-size: 16px;
+      font-size: var(--font-size-nav);
       font-weight: 600;
       cursor: pointer;
       list-style: none;
@@ -118,7 +118,6 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     @media (max-width: 1150px) {
       .header { width: calc(100% - 56px); }
       .nav { gap: 18px; }
-      .nav a { font-size: 16px; }
       .desktop-seminar { display: none; }
     }
     @media (max-width: 900px) {
@@ -128,9 +127,8 @@ const currentPath = Astro.url.pathname.replace(/\/$/, '') || '/';
     }
     @media (max-width: 600px) {
       .header { width: calc(100% - 36px); gap: 12px; }
-      .name { font-size: 16px; }
       .brand { gap: 8px; }
       .brand img { width: 35px; height: 35px; }
-      .mobile summary { font-size: 14px; padding: 8px 10px; gap: 6px; }
+      .mobile summary { padding: 8px 10px; gap: 6px; }
     }
 </style>

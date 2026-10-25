@@ -1,6 +1,7 @@
 /* Software page: approved Tidal cards with original transparent images. */
 .software-page {
-  font: 18px/1.7 Arial, Helvetica, sans-serif;
+  font: var(--font-size-base) / var(--line-height-body)
+    var(--theme-font-family-sans);
   color: var(--theme-on-bg);
   overflow-wrap: break-word;
 }
@@ -19,8 +20,8 @@
 }
 .software-page h1 {
   margin: 0;
-  font-size: clamp(40px, 4.3vw, 64px);
-  line-height: 1.07;
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-title);
   letter-spacing: -0.047em;
 }
 .software-page a {
@@ -55,8 +56,8 @@
   gap: 12px;
   margin: 0 0 12px;
   color: var(--theme-teal);
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: var(--font-size-sm);
+  line-height: var(--line-height-body);
 }
 .software-page .software-role::before {
   content: "";
@@ -68,8 +69,8 @@
 }
 .software-page .software-name {
   margin: 0 0 18px;
-  font-size: 35px;
-  line-height: 1.15;
+  font-size: var(--font-size-lg);
+  line-height: var(--line-height-heading);
   letter-spacing: -0.03em;
 }
 .software-page .software-details {
@@ -98,9 +99,9 @@
   border-radius: 3px;
   background: var(--theme-primary);
   color: #fff;
-  font-size: 17px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
-  line-height: 1.5;
+  line-height: var(--line-height-body);
   text-decoration: none;
 }
 .software-page .repository-link:hover {
@@ -149,7 +150,7 @@
   border-radius: 3px;
   background: var(--theme-primary);
   color: #fff;
-  font-size: 17px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   text-decoration: none;
 }
@@ -161,15 +162,12 @@
   height: 18px;
 }
 .software-page .back-top {
-  font-size: 17px;
+  font-size: var(--font-size-sm);
   text-decoration: none;
 }
 @media (max-width: 1150px) {
   .software-page .software-wrap {
     width: calc(100% - 56px);
-  }
-  .software-page h1 {
-    font-size: clamp(39px, 4.7vw, 54px);
   }
   .software-page .software-card {
     grid-template-columns: minmax(0, 1.6fr) minmax(230px, 0.85fr);
@@ -178,9 +176,6 @@
   }
 }
 @media (max-width: 900px) {
-  .software-page h1 {
-    font-size: clamp(42px, 7vw, 62px);
-  }
   .software-page .software-card {
     grid-template-columns: 1fr;
     gap: 23px;
@@ -191,17 +186,11 @@
   }
 }
 @media (max-width: 600px) {
-  .software-page {
-    font-size: 17px;
-  }
   .software-page .software-wrap {
     width: calc(100% - 36px);
   }
   .software-page .software-heading {
     padding: 28px 0 23px;
-  }
-  .software-page h1 {
-    font-size: clamp(37px, 8.5vw, 49px);
   }
   .software-page .software-list {
     gap: 17px;
@@ -211,7 +200,6 @@
     gap: 22px;
   }
   .software-page .software-role {
-    font-size: 16px;
     gap: 9px;
     margin-bottom: 11px;
   }
@@ -219,7 +207,6 @@
     flex-basis: 20px;
   }
   .software-page .software-name {
-    font-size: 31px;
     margin-bottom: 15px;
   }
   .software-page .software-details {
@@ -234,7 +221,6 @@
   .software-page .repository-link {
     padding: 11px 14px;
     margin-top: 20px;
-    font-size: 16px;
   }
   .software-page .software-actions {
     margin-top: 24px;

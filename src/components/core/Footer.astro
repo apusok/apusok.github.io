@@ -80,7 +80,7 @@ const email = footerSocials.find((social) => social.name === 'Email');
   }
   footer :global(.odyssey-logo) {
     font-family: var(--theme-font-family-serif);
-    font-size: 1.6rem;
+    font-size: var(--font-size-md);
     font-weight: 400;
     letter-spacing: -0.025em;
   }
@@ -123,7 +123,7 @@ const email = footerSocials.find((social) => social.name === 'Email');
     padding: 0;
     list-style: none;
     color: var(--theme-footer-link);
-    font-size: 0.8125rem;
+    font-size: var(--font-size-sm);
     display: flex;
     flex-wrap: wrap;
     gap: 8px 22px;
@@ -148,12 +148,12 @@ const email = footerSocials.find((social) => social.name === 'Email');
     /* justify-content: space-between; */
   }
   .footer-copyright__container p {
-    font-size: 0.6875rem;
+    font-size: var(--font-size-xs);
     margin: 0;
   }
   .footer--home {
     padding: 30px 0 20px;
-    line-height: 1.7;
+    line-height: var(--line-height-body);
   }
   .footer--home > :global(.content__container) {
     width: min(1360px, calc(100% - 80px));
@@ -161,13 +161,13 @@ const email = footerSocials.find((social) => social.name === 'Email');
     padding: 0;
   }
   .footer--home :global(.odyssey-logo) {
-    font-size: 26px;
+    font-size: var(--font-size-md);
   }
   .footer-affiliation {
     margin-top: 8px;
     color: var(--theme-footer-affiliation);
-    font-size: 14px;
-    line-height: 1.6;
+    font-size: var(--font-size-sm);
+    line-height: var(--line-height-body);
   }
   .footer--home .footer-grid__container {
     grid-template-columns: minmax(0, 1fr) minmax(0, 620px);
@@ -184,7 +184,7 @@ const email = footerSocials.find((social) => social.name === 'Email');
   .footer--home .footer-link__list,
   .footer-email {
     color: var(--theme-footer-link);
-    font-size: 14px;
+    font-size: var(--font-size-sm);
   }
   .footer-email {
     white-space: nowrap;
@@ -194,7 +194,7 @@ const email = footerSocials.find((social) => social.name === 'Email');
     padding-top: 15px;
   }
   .footer--home .footer-copyright__container p {
-    font-size: 12px;
+    font-size: var(--font-size-xs);
   }
   @media (max-width: 1150px) {
     .footer--home > :global(.content__container) {

@@ -130,7 +130,7 @@ pre .language-id {
 }
 
 #page[data-page='team'] .text-and-image__text h4 {
-	font-size: 0.875rem;
+	font-size: var(--font-size-sm);
 	font-weight: 400;
 }
 
@@ -157,8 +157,8 @@ pre .language-id {
 
 #page[data-page='about'] table {
 	width: 100%;
-	font-size: 0.9375rem;
-	line-height: 1.7;
+	font-size: var(--font-size-base);
+	line-height: var(--line-height-body);
 }
 
 #page[data-page='about'] table td {

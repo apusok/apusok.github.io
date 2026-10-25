@@ -1,7 +1,7 @@
 /* About page: homepage typography, compact CV sections, and shared sage panels. */
 .about-page {
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   overflow-wrap: break-word;
 }
 .about-wrap {
@@ -14,8 +14,8 @@
   font-weight: 400;
 }
 .about-page h1 {
-  font-size: clamp(40px, 4.3vw, 64px);
-  line-height: 1.07;
+  font-size: var(--font-size-xxl);
+  line-height: var(--line-height-title);
   letter-spacing: -0.047em;
   margin: 0 0 22px;
 }
@@ -24,8 +24,8 @@
   font-weight: 400;
 }
 .about-page h2 {
-  font-size: 42px;
-  line-height: 1.15;
+  font-size: var(--font-size-xl);
+  line-height: var(--line-height-heading);
   letter-spacing: -0.04em;
   margin: 0 0 26px;
 }
@@ -110,8 +110,8 @@
 }
 .about-page .section-index-title {
   margin: 0 0 17px;
-  font-size: 12px;
-  line-height: 1.6;
+  font-size: var(--font-size-xs);
+  line-height: var(--line-height-body);
   letter-spacing: 0.12em;
   font-weight: 700;
   text-transform: uppercase;
@@ -128,8 +128,8 @@
   margin-left: -1px;
   border-left: 2px solid transparent;
   color: var(--theme-muted);
-  font-size: 17px;
-  line-height: 1.5;
+  font-size: var(--font-size-nav);
+  line-height: var(--line-height-body);
   text-decoration: none;
   transition: color 0.2s, border-color 0.2s, background 0.2s;
 }
@@ -191,8 +191,8 @@
 }
 .about-page .timeline-date {
   color: var(--theme-teal);
-  font-size: 18px;
-  line-height: 1.7;
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-body);
   margin: 0;
   font-variant-numeric: tabular-nums;
 }
@@ -256,7 +256,8 @@
   background: var(--theme-teal);
 }
 .community .section-body > p:first-of-type {
-  font: normal 25px/1.45 Georgia, "Times New Roman", serif;
+  font: normal var(--font-size-md) / var(--line-height-body)
+    var(--theme-font-family-serif);
   letter-spacing: -0.02em;
   color: var(--theme-on-bg);
   margin-bottom: 24px;
@@ -313,7 +314,7 @@
   color: #fff;
   border-radius: 3px;
   padding: 13px 19px;
-  font-size: 17px;
+  font-size: var(--font-size-sm);
   font-weight: 600;
   text-decoration: none;
 }
@@ -325,15 +326,12 @@
   height: 18px;
 }
 .about-page .back-top {
-  font-size: 17px;
+  font-size: var(--font-size-sm);
   text-decoration: none;
 }
 @media (max-width: 1150px) {
   .about-wrap {
     width: calc(100% - 56px);
-  }
-  .about-page h1 {
-    font-size: clamp(39px, 4.7vw, 54px);
   }
   .about-hero {
     gap: 40px;
@@ -342,18 +340,12 @@
     grid-template-columns: 198px minmax(0, 1fr);
     gap: 38px;
   }
-  .about-page .section-index a {
-    font-size: 16px;
-  }
   .timeline-item {
     grid-template-columns: 150px minmax(0, 1fr);
     gap: 22px;
   }
 }
 @media (max-width: 900px) {
-  .about-page h1 {
-    font-size: clamp(42px, 7vw, 62px);
-  }
   .about-hero {
     grid-template-columns: minmax(0, 1fr) 220px;
     gap: 30px;
@@ -398,14 +390,7 @@
   .about-wrap {
     width: calc(100% - 36px);
   }
-  .about-page {
-    font-size: 17px;
-  }
-  .about-page h1 {
-    font-size: clamp(37px, 8.5vw, 49px);
-  }
   .about-page h2 {
-    font-size: 36px;
     margin-bottom: 23px;
   }
   .about-hero {
@@ -440,9 +425,6 @@
   }
   .timeline-item + .timeline-item {
     padding-top: 10px;
-  }
-  .about-page .timeline-date {
-    font-size: 17px;
   }
   .timeline-entry {
     padding-left: 16px;
